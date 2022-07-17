@@ -19,3 +19,9 @@ body {
     font-weight:600;
     padding-bottom:20px;
 }
+
+#small404 {
+    height:250px;
+    display:flex;
+    margin:0 auto;
+}

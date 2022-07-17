@@ -66,4 +66,6 @@ As a service tool, the website will include a feature to track and plan their ca
 ### Current Bugs
 *********************
 ## <u>Acknowledgements</u>
+- Pexel Images
+    * Tima Miroshnichenk, "small404" image - https://www.pexels.com/photo/a-person-holding-a-smartphone-on-a-pink-background-7009834/
 ## <u>References</u>
