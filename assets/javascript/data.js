@@ -7,7 +7,7 @@ press.addEventListener("click", function(){
 let date = new Date();
 let hour = date.getHours();
 let greetMessage = document.getElementById('greet');
-if (hour < 11){
+if (hour < 12){
     greet.innerHTML = "Good Morning!";
 } else if (hour < 17){
     greet.innerHTML = "Good Afternoon!";
