@@ -6,7 +6,7 @@ let calculate = document.getElementById('entry');
 
 /** breaking down calories to percentages */
 let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent40;
-calculate.addEventListener('click', function(event){
+calculate.addEventListener('click', function(){
     event.preventDefault();
     percent5  = (target*0.05);
     percent10 = (target*0.1);

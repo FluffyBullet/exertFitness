@@ -10,8 +10,7 @@
     - [Fonts](#font-selection)
     - [View - Mobile](#mobile-design)
     - [View - Tablet](#tablet-design)
-    - [View - Laptop](#tablet-design)
-    - [View - Desktop](#desktop-design)
+    - [View - Laptop](#laptop-plus-design)
 - [Expected Uses of Website](#expected-uses-of-website)
 - [Focus of project](#focus-of-the-project)
 - [Progression of Website](#progression-of-website)
@@ -43,9 +42,17 @@ As a service tool, the website will include a feature to track and plan their ca
    ### Color Scheme
    ### Font Selection
    ### Mobile Design
+   For mobile phones, the width of screens are limited with widths and selection area. To counter this, the wireframe created follows a simple flow with exception of two fields where the image is related to the information adjacent and less volume.<br>
+   <img src = "assets/images/readme_files/mobile_view.png" alt = "Design for mobile screens" height="450px">
+
    ### Tablet Design
-   ### Laptop Design
-   ### Desktop Design
+   Similar to the above Mobile Design, Tablets offer a wider screen view but with it's cursor selection requiring space as these are mostly navigated by fingertips. The additional space offers more room to expand on font sizes, division blocks and the images.<br>
+   <img src = "assets/images/readme_files/tablet_view.png" alt="Design for tablet screens" height = "450px">
+
+   ### Laptop Plus Design
+   Laptops or desktop offer the clearest visual displays and accurate selection with mouse pointers. This factor has been counted in when drawing the wireframe for the final display stage, allowing images to be adjacent to the text but spread across the page, information boxes to be wider and displayed inline for easier comparison.<br>
+   <img src = "assets/images/readme_files/laptop_plus_view.png" alt="Design for laptops and larger screens" height = "450px">
+   
 
 ## <u>Expected Uses of Website</u>
 
