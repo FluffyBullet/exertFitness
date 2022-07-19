@@ -29,8 +29,15 @@ As a service tool, the website will include a feature to track and plan their ca
 
 ## <u>Research</u>
 1. characteristics of personal trainers
-    * routine
+    * Routine
+        1. For personal trainers to optimize their clients muscle growth, a schedule is created with the client for type of excersizes, daily routine and removal of bad-habits.
+            1. This feature can be met with an "objectives" chart or progression feedback at a later stage of the website application. 
     * Consumption
+        1. A huge impactor to personal training and gaining muscle is the balance of consumption. A Healthy maintenance of weight and muscles requires Women to consume approximately 2,000 calories per day and Men to consume 2,500 calories per day.<br>
+        Egle's approach is to adjust the calorie requirement to customers on an independent basis. i.e a new starter who needs to add mass to convert to muscle will be given a target of 3,000 calories, or an existing client needing to gain muscle but already started on the base 3,500 will be increased to 4,000.
+        2. Browsing over websites, several guides have included the reason for calories, how to count calories or even types of food, i.e protein.
+        website [www.omnicalculator.com/health/meal-calorie#how-many-calories-per-meal-should-i-eat](https://www.omnicalculator.com/health/meal-calorie#how-many-calories-per-meal-should-i-eat)
+            note as I was previously researching this website was displayed as an information/blog post. since this has been created as a calculator too. My coding has not been influenced from this website.
     * Excersize
 2. Identification of uses
 3. Information/Methods required
@@ -67,6 +74,7 @@ As a service tool, the website will include a feature to track and plan their ca
 #### Mid-project
 #### Final stage
 #### Future developments
+ 1. Objective and target board to be included as part of an app/login feature. (research 1, Routine)
 
 ## <u>Test & Bugs</u>
 ### Fixed
