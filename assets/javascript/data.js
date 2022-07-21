@@ -1,13 +1,11 @@
 /** gather of information for calculator */
 let quantity = document.getElementById('meals').value;
 let report = document.getElementById('data-entry');
-let target = document.getElementById('target');
 let calculate = document.getElementById('entry');
 
 /** breaking down calories to percentages */
 let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent40;
-calculate.addEventListener('click', function(){
-    event.preventDefault();
+
     percent5  = (target*0.05);
     percent10 = (target*0.1);
     percent15 = (target*0.15);
@@ -16,9 +14,14 @@ calculate.addEventListener('click', function(){
     percent30 = (target*0.3);
     percent35 = (target*0.35);
 
+calculate.addEventListener('click', nextStage);
 
+function nextStage(){
+event.preventDefault();
+
+let target = document.getElementById('target');
 if (quantity == 3){
-    report.innerHTML=
+    report.innerHTML=`
         <table>
             <th>
                 <td>Meal</td>
@@ -36,14 +39,13 @@ if (quantity == 3){
                 <td id="dinner"></td>
             </tr>
             <tr>
-                <td>`${percent30} / ${percent35}`</td>
-                <td>`${percent35} / ${percent40}`</td>
-                <td>`${percent25} / ${percent35}`</td>
+                <td>${percent30} / ${percent35}</td>
+                <td>${percent35} / ${percent40}</td>
+                <td>${percent25} / ${percent35}</td>
             </tr>
-        </table>
-    
+        </table>`    
 } else if (quantity == 4){
-    report.innerHTML=
+    report.innerHTML=`
         <table>
             <th>
                 <td>Meal</td>
@@ -63,15 +65,15 @@ if (quantity == 3){
                 <td id="dinner"></td>
             </tr>
             <tr>
-                <td>`${percent30} / ${percent35}`</td>
-                <td>`${percent5} / ${percent10}`</td>
-                <td>`${percent35} / ${percent40}`</td>
-                <td>`${percent25} / ${percent30}`</td>
+                <td>${percent30} / ${percent35}</td>
+                <td>${percent5} / ${percent10}</td>
+                <td>${percent35} / ${percent40}</td>
+                <td>${percent25} / ${percent30}</td>
             </tr>
-        </table>
+        </table>`
 } else {
     report.innerHTML=
-        <table>
+        `<table>
             <th>
                 <td>Meal</td>
                 <td>Calories</td>
@@ -92,12 +94,12 @@ if (quantity == 3){
                 <td id="dinner"></td>
             </tr>
             <tr>
-                <td>`${percent30} / ${percent35}`</td>
-                <td>`${percent5} / ${percent10}`</td>
-                <td>`${percent35} / ${percent40}`</td>
-                <td>`${percent5} / ${percent10}`</td>
-                <td>`${percent15} / ${percent20}`</td>
+                <td>${percent30} / ${percent35}</td>
+                <td>${percent5} / ${percent10}</td>
+                <td>${percent35} / ${percent40}</td>
+                <td>${percent5} / ${percent10}</td>
+                <td>${percent15} / ${percent20}</td>
             </tr>
-        </table>
+        </table>`
 }
-})
+}
