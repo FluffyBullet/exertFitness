@@ -23,11 +23,11 @@ let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent
     if (meals == 3){
         stageTwo.innerHTML=
         `<table>
-            <th>
-                <td><Meal></td>
-                <td><calories></td>
-                <td><target Range(Min/Max)></td>
-            </th>
+            <tr>
+                <th>Meal</th>
+                <th>calories</th>
+                <th>target Range(Min/Max)</th>
+            </tr>
             <tr>
                 <td><p>Breakfast</p></td>
                 <td><input id=”breakfast”></td>
@@ -48,9 +48,9 @@ let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent
         stageTwo.innerHTML=
         `<table>
             <tr>
-                <th><Meal></th>
-                <th><calories></th>
-                <th><target Range(Min/Max)></th>
+                <th>Meal</th>
+                <th>calories</th>
+                <th>target Range(Min/Max)</th>
             </tr>
             <tr>
                 <td><p>Breakfast</p></td>
@@ -74,13 +74,12 @@ let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent
             </tr>
         </table>`;
     } else if (meals == 5){
-        stageTwo.innerHTML =
         stageTwo.innerHTML=
         `<table>
             <tr>
-                <th><Meal></th>
-                <th><calories></th>
-                <th><target Range(Min/Max)></th>
+                <th>Meal</th>
+                <th>calories</th>
+                <th>target Range(Min/Max)</th>
             </tr>
             <tr>
                 <td><p>Breakfast</p></td>
@@ -112,6 +111,8 @@ let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent
         stageTwo.innerHTML = `
         <p>:/( Something went wrong!</p> `;
     }
+
+
 
 // stageTwo.innerHTML = `<p> Testing the addition with new information.Register</p> <br> 
 // <p>Registered information is ${tCal}</p>
