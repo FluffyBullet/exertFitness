@@ -43,15 +43,15 @@ let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent
                 <td><input id=”dinner”></td>
                 <td>${percent25} / ${percent35}</td>
             </tr>
-        </table>`
+        </table>`;
     } else if (meals == 4){
         stageTwo.innerHTML=
         `<table>
-            <th>
-                <td><Meal></td>
-                <td><calories></td>
-                <td><target Range(Min/Max)></td>
-            </th>
+            <tr>
+                <th><Meal></th>
+                <th><calories></th>
+                <th><target Range(Min/Max)></th>
+            </tr>
             <tr>
                 <td><p>Breakfast</p></td>
                 <td><input id=”breakfast”></td>
@@ -72,44 +72,45 @@ let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent
                 <td><input id=”dinner”></td>
                 <td>${percent25} / ${percent30}</td>
             </tr>
-        </table>`
+        </table>`;
     } else if (meals == 5){
+        stageTwo.innerHTML =
         stageTwo.innerHTML=
-            `<table>
-                <th>
-                    <td><Meal></td>
-                    <td><calories></td>
-                    <td><target Range(Min/Max)></td>
-                </th>
-                <tr>
-                    <td><p>Breakfast</p></td>
-                    <td><input id=”breakfast”></td>
-                    <td>${percent30} / ${percent35}</td>
-                </tr>
-                <tr>
-                    <td><p>Morning Snack</p></td>
-                    <td><input id=”morningSnack”></td>
-                    <td>${percent5} / ${percent10}</td>
-                </tr>
-                <tr>
-                    <td><p>Lunch</p></td>
-                    <td><input id=”lunch”></td>
-                    <td>${percent35} / ${percent45}</td>
-                </tr>
-                <tr>
-                    <td><p>Afternoon Snack</p></td>
-                    <td><input id=”afternoonSnack”></td>
-                    <td>${percent5} / ${percent10}</td>
-                </tr>
-                <tr>
-                    <td><p>Dinner </p></td>
-                    <td><input id=”dinner”></td>
-                    <td>${percent15} / ${percent20}</td>
-                </tr>
-            </table>`
+        `<table>
+            <tr>
+                <th><Meal></th>
+                <th><calories></th>
+                <th><target Range(Min/Max)></th>
+            </tr>
+            <tr>
+                <td><p>Breakfast</p></td>
+                <td><input id=”breakfast”></td>
+                <td>${percent25} / ${percent30}</td>
+            </tr>
+            <tr>
+                <td><p>Morning Snack</p></td>
+                <td><input id=”morningSnack”></td>
+                <td>${percent5} / ${percent10}</td>
+            </tr>
+            <tr>
+                <td><p>Lunch</p></td>
+                <td><input id=”lunch”></td>
+                <td>${percent35} / ${percent40}</td>
+            </tr>
+            <tr>
+            </tr>
+                <td><p>Afternoon Snack </p></td>
+                <td><input id=afternoonSnack></td>
+                <td>${percent25} / ${percent30}</td>
+            <tr>
+                <td><p>Dinner </p></td>
+                <td><input id=”dinner”></td>
+                <td>${percent25} / ${percent30}</td>
+            </tr>
+        </table>`;
     } else {
         stageTwo.innerHTML = `
-        <p>:/( Something went wrong!</p> `
+        <p>:/( Something went wrong!</p> `;
     }
 
 // stageTwo.innerHTML = `<p> Testing the addition with new information.Register</p> <br> 

@@ -77,6 +77,9 @@ As a service tool, the website will include a feature to track and plan their ca
  1. Objective and target board to be included as part of an app/login feature. (research 1, Routine)
 
 ## <u>Test & Bugs</u>
+ 1. Inner HTML removing instantly after applying
+ 2. If table allowed 3 and 4 to be displayed with different answers, but 5 was not showing
+ 3. Imported tables not showing headers
 ### Fixed
 ### Current Bugs
 *********************
