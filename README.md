@@ -75,6 +75,7 @@ As a service tool, the website will include a feature to track and plan their ca
 #### Final stage
 #### Future developments
  1. Objective and target board to be included as part of an app/login feature. (research 1, Routine)
+ 2. Scheduled e-mails to owner of Exert Fitness to advise of users who have updated their calorie counts on the website.
 
 ## <u>Test & Bugs</u>
  1. Inner HTML removing instantly after applying
