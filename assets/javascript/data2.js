@@ -10,7 +10,7 @@ let tCal = parseInt(document.getElementById('target').value);
 let date = document.getElementById('date').value;
 let meals = document.getElementById('meals').value;
 let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent40;
-/** Calculating  */
+/** Calculating values*/
     percent5  = tCal*0.05;
     percent10 = tCal*0.1;
     percent15 = tCal*0.15;
