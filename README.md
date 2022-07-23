@@ -46,7 +46,16 @@ As a service tool, the website will include a feature to track and plan their ca
 
 ## <u>Designing of the Website</u>
    ### Structure of the site
+   I've chosen the site to have a clear and easy to use navigation hosted over 3 seperate pages.<br>
+   <strong>Page 1</strong>
+   This page is the main introduction to the companies website. Overall image should be friendly, informative and proving why the potential client should progress further.<br>
+   <strong>Page 2</strong>
+   Allowing the user to view the services provided more in-depth with prcing details and locations or accessibility. Informtion should still be simple and easy to use, making decisive (locational) information available at the start.<br>
+   <strong>Page 3</strong>
+   Final page is a resource used during training/logging, allowing users to check their calorie intakes. With this feature on the main website free for all to use, the information provided may help gain clientell (as their information will be tracked on a spreadsheet) whilst providing a guide to the user of estimated calories for the dedicated meals.
+
    ### Color Scheme
+   1. Exert Fitness had previously created a logo, presenting a color-scheme for the company and how it is displayed. This was originally Dark Blue and Red, but since changed with consultation with designing artist. This since changed to the current light blue for the male models and light pink on the female models, overall making more approachable for both/all geneders.
    ### Font Selection
    ### Mobile Design
    For mobile phones, the width of screens are limited with widths and selection area. To counter this, the wireframe created follows a simple flow with exception of two fields where the image is related to the information adjacent and less volume.<br>
