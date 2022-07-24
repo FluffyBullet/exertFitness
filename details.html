@@ -13,11 +13,15 @@
         <header>
             <img/>
             <h1>Exert Fitness</h1>
-            <ul>
-                <li><a href="index.html">Home Page</a></li>
-                <li><a href="details.html">Location and Fees</a></li>
-                <li><a href="calculator.html">Calorie Counter</a></li>
-            </ul>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <div class="nav_style" id="navHamburger" >
+                <a href="details.html" class="active">Location and Fees</a>
+                <a href="index.html" >Home Page</a>
+                <a href="calculator.html">Calorie Counter</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                  </a>
+            </div>
         </header>
         <!-- Showing location of gyms and area covered by the service-->
         <section>
@@ -61,5 +65,5 @@
             </div>
         </section>
     </body>
-    <!-- <script src="assets/javascript/data.js"></script> -->
+    <script src="assets/javascript/data2.js"></script>
 </html>

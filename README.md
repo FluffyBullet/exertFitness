@@ -101,4 +101,6 @@ As a service tool, the website will include a feature to track and plan their ca
 ## <u>Acknowledgements</u>
 - Pexel Images
     * Tima Miroshnichenk, "small404" image - https://www.pexels.com/photo/a-person-holding-a-smartphone-on-a-pink-background-7009834/
+- w3 Schools
+    * Responsive Navigation Bar, to display navigation with smaller screens in a compact format - https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
 ## <u>References</u>

@@ -124,6 +124,16 @@ let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent
 ;
 }
 
+function myFunction() {
+    var x = document.getElementById("navHamburger");
+    if (x.className === "nav_style") {
+      x.className += " responsive";
+    } else {
+      x.className = "nav_style";
+    }
+  }
 /** JS for fetching information from Google Spreadsheets API
  * Link is : https://docs.google.com/spreadsheets/d/1ISjmb4HrdaaqVw59y0SunxA3fGeX6WJywTnd2ke9oXI/edit?usp=sharing (editor rights)
+ * https://spreadsheets.google.com/feeds/worksheets/1ISjmb4HrdaaqVw59y0SunxA3fGeX6WJywTnd2ke9oXI/public/basic?alt=json
  */
+

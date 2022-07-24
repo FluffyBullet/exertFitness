@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
-        <title>
-            Exert Fitness - Personal Trainer
-        </title>
         <meta name="author" content="David Reynolds">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <link rel="stylesheet" href="assets/css/style.css" text="text/stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
+            </style>
     </head>
     <body>
         <header>
-            <img/>
             <h1>Exert Fitness</h1>
-            <ul>
-                <li><a href="index.html">Home Page</a></li>
-                <li><a href="details.html">Location and Fees</a></li>
-                <li><a href="calculator.html">Calorie Counter</a></li>
-            </ul>
+            <!-- Responsive Navigation Bar taken from w3 Schools-->
+
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <div class="nav_style" id="navHamburger" >
+                <a href="calculator.html"class="active">Calorie Counter</a>
+                <a href="index.html" >Home Page</a>
+                <a href="details.html">Location and Fees</a>
+                
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                  </a>
+            </div>
         </header>
         <section>
             <!--Entry of name, date and target calories-->
