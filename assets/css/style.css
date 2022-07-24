@@ -4,6 +4,9 @@ body {
     background-color:#131f2f;
     color:pink;
     font-family: 'Joan', serif;
+    margin:0 auto;
+    text-align:center;
+    
 }
 
 #logo {

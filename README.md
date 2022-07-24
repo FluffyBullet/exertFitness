@@ -93,6 +93,11 @@ As a service tool, the website will include a feature to track and plan their ca
 ### Fixed
 ### Current Bugs
 *********************
+
+### Technologies used:
+    For this site, I am using the languages of HTML, CSS and JavaScript.
+    I've also selected to use google spreadsheets to store and fetch data (Via API) which will be presented in google graphs
+
 ## <u>Acknowledgements</u>
 - Pexel Images
     * Tima Miroshnichenk, "small404" image - https://www.pexels.com/photo/a-person-holding-a-smartphone-on-a-pink-background-7009834/
