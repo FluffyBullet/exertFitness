@@ -112,16 +112,6 @@ let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent
         <p>:/( Something went wrong!</p> `;
     }
 
-
-
-// stageTwo.innerHTML = `<p> Testing the addition with new information.Register</p> <br> 
-// <p>Registered information is ${tCal}</p>
-// <p>Name is : ${name}</p>
-// <p>date Entered is: ${date}</p>
-// <p>You have selected ${meals} per day</p>
-// <p>10% is ${percent10}</p>
-// `
-;
 }
 
 function myFunction() {
@@ -142,4 +132,28 @@ function myFunction() {
 * https://www.w3schools.com/js/js_graphics_google_chart.asp
 */
 
+// function drawChart() {
 
+//     var data = google.visualization.arrayToDataTable([
+//       ['Contry', 'Mhl'],
+//       ['Italy', 55],
+//       ['France', 49],
+//       ['Spain', 44],
+//       ['USA', 24],
+//       ['Argentina', 15]
+//     ]);
+    
+//     var options = {
+//       title: 'World Wide Wine Production'
+//     };
+    
+//     var chart = new google.visualization.PieChart(document.getElementById('myChart'));
+//     chart.draw(data, options);
+    
+//     }
+
+    /* to be changed for tablet&desktop mode*/
+    // var options = {
+    //     title: 'World Wide Wine Production',
+    //     is3D: true
+    //   };

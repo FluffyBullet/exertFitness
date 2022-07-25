@@ -76,11 +76,17 @@ As a service tool, the website will include a feature to track and plan their ca
 *********************
 ## <u>Progression of Website</u>
 ### Start
+The skeleton of the created website was drafted and agreed with Egle (company owner), which also listed required paragraphs with required content. Egle reached out to her friend who created the blogs and bio's.
+
+To ensure it's contents is relatable, a comparison of personal trainers websites for layouts, featured text and page contents were generated. Whilst researching layouts and content, a note was also made regarding target clientell and what they feature.
+
 * resources available before project started
 * Text provided for website
 * Logo
 
 #### Mid-project
+
+
 #### Final stage
 #### Future developments
  1. Objective and target board to be included as part of an app/login feature. (research 1, Routine)
