@@ -55,8 +55,10 @@ As a service tool, the website will include a feature to track and plan their ca
    Final page is a resource used during training/logging, allowing users to check their calorie intakes. With this feature on the main website free for all to use, the information provided may help gain clientell (as their information will be tracked on a spreadsheet) whilst providing a guide to the user of estimated calories for the dedicated meals.
 
    ### Color Scheme
-   1. Exert Fitness had previously created a logo, presenting a color-scheme for the company and how it is displayed. This was originally Dark Blue and Red, but since changed with consultation with designing artist. This since changed to the current light blue for the male models and light pink on the female models, overall making more approachable for both/all geneders.
+   1. Exert Fitness had previously created a logo, presenting a color-scheme for the company and how it is displayed. This was originally Dark Blue and Red, but since changed with consultation with designing artist. This since changed to the current light blue for the male models and light pink on the female models, overall making more approachable for both/all genders.
+    1. Testing the font of pink against the dark blue background of the logo (color #131f2f), color contrast and accesibility has provided a good level.
    ### Font Selection
+   Browsing wesbites availalbe,  I found Googles examples of serif family - providing a clear and strong fonts with an elegant finish. 
    ### Mobile Design
    For mobile phones, the width of screens are limited with widths and selection area. To counter this, the wireframe created follows a simple flow with exception of two fields where the image is related to the information adjacent and less volume.<br>
    <img src = "assets/images/readme_files/mobile_view.png" alt = "Design for mobile screens" height="450px">
@@ -78,14 +80,24 @@ As a service tool, the website will include a feature to track and plan their ca
 ### Start
 The skeleton of the created website was drafted and agreed with Egle (company owner), which also listed required paragraphs with required content. Egle reached out to her friend who created the blogs and bio's.
 
-To ensure it's contents is relatable, a comparison of personal trainers websites for layouts, featured text and page contents were generated. Whilst researching layouts and content, a note was also made regarding target clientell and what they feature.
+To ensure it's contents is relatable, a comparison of personal trainers websites for layouts, featured text and page contents were generated. Whilst researching layouts and content, a note was also made regarding target clientell and what they feature.<br>
+To create a unique selling point of the website/service provided, I found an algorithm which breaks down target calories to % of the total. Maximizing calories intakes for good health and well being (eating 50% of your target calories during the final meal of the day equal to doubling the target calories as your body stores the excess fats/energy).
 
-* resources available before project started
-* Text provided for website
-* Logo
+On startup of the business, Egle had a logo created which included a shield with a male and female figure. The male figure was in a light blue whilst the female side was in a dark red. Reviewing at a later stage, this was edited (by Egle) as the red was too bright/aggressive for a color scheme but wanted something more friendly, resulting in the light blue and pink color scheme.<br>
+This allowed me to feature the logo's colors as the website schemes. 
 
 #### Mid-project
+First two pages include HTML and CSS information with minimal content to avoid over-whelming the user on their first visit to the website. Text including blogs and testimonies were trimmed back to avoid the "wall of text", including for smaller devices.
 
+The main focus of my project has three stages to be completed.
+1. Entry of name, date, calories and division of meals.
+2. Calories consumed per meal and broken down with target values.
+3. Results of totals calories consumed then displayed on a line graph chart (alternatively pie chart showing total % of meals with total calories consumed at the bottom.)
+
+First two sections have now been created, 
+Initial entry of name , date, target and meals are only visible on first load of the screen :<br>
+<image src="assets/images/readme_files/startup_fields.png" alt="first load of window with limited entry fields" height="450px"> <br>
+Without a value being entered into "Target" field, an error is generated on loading of Exert Fitness web page as no value is in the variable "tCal" also proceeding to next stage displays Not A Number (NaN). As this will be a required field in future update but also enter a default value of 2,000 (reccomended daily allowance for females).
 
 #### Final stage
 #### Future developments
@@ -93,11 +105,12 @@ To ensure it's contents is relatable, a comparison of personal trainers websites
  2. Scheduled e-mails to owner of Exert Fitness to advise of users who have updated their calorie counts on the website.
 
 ## <u>Test & Bugs</u>
+### Fixed
+### Current Bugs
  1. Inner HTML removing instantly after applying
  2. If table allowed 3 and 4 to be displayed with different answers, but 5 was not showing
  3. Imported tables not showing headers
-### Fixed
-### Current Bugs
+ 4. Nav bar not extended to full width on calculator page.
 *********************
 
 ### Technologies used:
