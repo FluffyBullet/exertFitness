@@ -137,3 +137,9 @@ function myFunction() {
  * https://spreadsheets.google.com/feeds/worksheets/1ISjmb4HrdaaqVw59y0SunxA3fGeX6WJywTnd2ke9oXI/public/basic?alt=json
  */
 
+
+/* alternative - Pie Chart from google charts
+* https://www.w3schools.com/js/js_graphics_google_chart.asp
+*/
+
+
