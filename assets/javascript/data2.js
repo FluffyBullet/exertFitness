@@ -1,6 +1,7 @@
 let stageTwo = document.getElementById('dataEntry');
 let buttonOne = document.getElementById('stepOne');
-let target = parseInt(document.getElementById('target').value);
+google.charts.load('current',{packages:['corechart']});
+// google.charts.setOnLoadCallback(drawChart);
 
 /** Starting calculations from first entry fields */
 function stepOne(){
@@ -25,8 +26,8 @@ let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent
         `<table>
             <tr>
                 <th>Meal</th>
-                <th>calories</th>
-                <th>target Range(Min/Max)</th>
+                <th>Calories</th>
+                <th>Target Range(Min/Max)</th>
             </tr>
             <tr>
                 <td><p>Breakfast</p></td>
@@ -43,7 +44,9 @@ let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent
                 <td><input id=”dinner”></td>
                 <td>${percent25} / ${percent35}</td>
             </tr>
-        </table>`;
+        </table>
+        <button onclick="drawChart()">Display Chart</button>
+        `;
     } else if (meals == 4){
         stageTwo.innerHTML=
         `<table>
@@ -109,9 +112,8 @@ let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent
         </table>`;
     } else {
         stageTwo.innerHTML = `
-        <p>:/( Something went wrong!</p> `;
+        <p>:( Something went wrong!</p> `;
     }
-
 }
 
 function myFunction() {
@@ -132,21 +134,30 @@ function myFunction() {
 * https://www.w3schools.com/js/js_graphics_google_chart.asp
 */
 
-// function drawChart() {
+function drawChart(){
+var data = new google.visualization.DataTable();
+data.addColumn('string', 'Job Listings');
+data.addColumn('number', 'Jobs');
+data.addRows([
+  ['GOjobs', 33],
+  ['Vault', 29],
+  ['Freshjobs', 28],
+  ['TweetMyJob', 27],
+  ['US Jobs', 21],
 
-//     var data = google.visualization.arrayToDataTable([
-//       ['Contry', 'Mhl'],
-//       ['Italy', 55],
-//       ['France', 49],
-//       ['Spain', 44],
-//       ['USA', 24],
-//       ['Argentina', 15]
-//     ]);
-    
-//     var options = {
-//       title: 'World Wide Wine Production'
-//     };
-    
+]);
+
+
+var options = {'title':'Calories intake for today:',
+'width': 1000,
+'height':800};
+
+var chart = new google.visualization.PieChart(document.getElementById('feedback-chart'));
+chart.draw(data, options);
+
+let graphDisplay = document.getElementById('feedback-chart');
+graphDisplay.style.display="block";
+}                      
 //     var chart = new google.visualization.PieChart(document.getElementById('myChart'));
 //     chart.draw(data, options);
     
@@ -155,5 +166,4 @@ function myFunction() {
     /* to be changed for tablet&desktop mode*/
     // var options = {
     //     title: 'World Wide Wine Production',
-    //     is3D: true
-    //   };
+    //     is3D: true;

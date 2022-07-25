@@ -7,6 +7,10 @@ body {
     text-align:center;   
 }
 
+#feedback-chart{
+display:none;
+}
+
 /* Navigation bar taken from w3 Schools */
 .nav_style {
     overflow: hidden;
@@ -37,7 +41,7 @@ body {
   .nav_style .icon {
     display: none;
   }
-  
+
  
 /*end of navigation bar styling from w3 schools (continued in media queries)*/
 
