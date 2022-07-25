@@ -31,12 +31,12 @@ let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent
             </tr>
             <tr>
                 <td><p>Breakfast</p></td>
-                <td><input id=”breakfast”></td>
+                <td><input id=”breakfast” type="number"></td>
                 <td>${percent30} / ${percent35}</td>
             </tr>
             <tr>
                 <td><p>Lunch</p></td>
-                <td><input id=”lunch”></td>
+                <td><input id=”lunch” type ="number"></td>
                 <td>${percent35} / ${percent40}</td>
             </tr>
             <tr>
@@ -136,22 +136,24 @@ function myFunction() {
 
 function drawChart(){
 var data = new google.visualization.DataTable();
-data.addColumn('string', 'Job Listings');
-data.addColumn('number', 'Jobs');
+let breakfastValue = parseInt(document.getElementById('breakfast'));
+let morningSnack = parseInt(document.getElementById('morningSnack'));
+data.addColumn('string', 'Meal');
+data.addColumn('number', 'calories');
 data.addRows([
-  ['GOjobs', 33],
-  ['Vault', 29],
-  ['Freshjobs', 28],
-  ['TweetMyJob', 27],
-  ['US Jobs', 21],
+  ['Breakfast', 22],
+  ['Morning Snack',30],
+  ['Lunch', 28],
+  ['Afternoon Snack', 27],
+  ['Dinner', 21],
 
 ]);
 
 
 var options = {'title':'Calories intake for today:',
-'width': 1000,
-'height':800};
-
+// 'width': 600,
+// 'height':800};
+};
 var chart = new google.visualization.PieChart(document.getElementById('feedback-chart'));
 chart.draw(data, options);
 
