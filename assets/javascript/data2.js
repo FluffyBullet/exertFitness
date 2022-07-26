@@ -11,6 +11,7 @@ let tCal = parseInt(document.getElementById('target').value);
 let date = document.getElementById('date').value;
 let meals = document.getElementById('meals').value;
 let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent40;
+
 /** Calculating values*/
     percent5  = tCal*0.05;
     percent10 = tCal*0.1;
@@ -31,17 +32,17 @@ let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent
             </tr>
             <tr>
                 <td><p>Breakfast</p></td>
-                <td><input id=”breakfast” type="number"></td>
+                <td><input type="number" id="breakfast" value=${percent30}></td>
                 <td>${percent30} / ${percent35}</td>
             </tr>
             <tr>
                 <td><p>Lunch</p></td>
-                <td><input id=”lunch” type ="number"></td>
+                <td><input id="lunch" type ="number"></td>
                 <td>${percent35} / ${percent40}</td>
             </tr>
             <tr>
                 <td><p>Dinner </p></td>
-                <td><input id=”dinner”></td>
+                <td><input id="dinner" type="number"></td>
                 <td>${percent25} / ${percent35}</td>
             </tr>
         </table>
@@ -86,17 +87,17 @@ let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent
             </tr>
             <tr>
                 <td><p>Breakfast</p></td>
-                <td><input id=”breakfast”></td>
+                <td><input id="breakfast"></td>
                 <td>${percent25} / ${percent30}</td>
             </tr>
             <tr>
                 <td><p>Morning Snack</p></td>
-                <td><input id=”morningSnack”></td>
+                <td><input id="morningSnack"></td>
                 <td>${percent5} / ${percent10}</td>
             </tr>
             <tr>
                 <td><p>Lunch</p></td>
-                <td><input id=”lunch”></td>
+                <td><input id="lunch"></td>
                 <td>${percent35} / ${percent40}</td>
             </tr>
             <tr>
@@ -136,13 +137,12 @@ function myFunction() {
 
 function drawChart(){
 var data = new google.visualization.DataTable();
-let breakfastValue = parseInt(document.getElementById('breakfast'));
-let morningSnack = parseInt(document.getElementById('morningSnack'));
+
 data.addColumn('string', 'Meal');
 data.addColumn('number', 'calories');
 data.addRows([
-  ['Breakfast', 22],
-  ['Morning Snack',30],
+  ['Breakfast',`${breakfast}`],
+  ['Morning Snack',`${morningSnack}`],
   ['Lunch', 28],
   ['Afternoon Snack', 27],
   ['Dinner', 21],
@@ -169,3 +169,24 @@ graphDisplay.style.display="block";
     // var options = {
     //     title: 'World Wide Wine Production',
     //     is3D: true;
+
+function storeResults(){
+    const breakfast = parseInt(document.getElementById('breakfast').value);
+    const morningSnack = parseInt(document.getElementById('morningSnack').value);
+    const lunch = parseInt(documnet.getElementById('lunch').value);
+    const afternoonSnack = parseInt (document.getElementById('afternoonSnack').value);
+    const dinner = parseInt(document.getElementById('dinner').value);
+    const date = document.getElementById('date').value;
+    let store = JSON.parse(
+        localStorage.getItem('dailys')
+    );
+    if (store === null) {
+        store = {};
+    }
+    console.log(store);
+    store[date] = {
+        breakfast: breakfast,
+    }
+    localStorage.setItem('dailys',JSON.stringify(store));
+    console.log(store['2022-07-26'])
+}
