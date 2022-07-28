@@ -1,7 +1,7 @@
 let stageTwo = document.getElementById('dataEntry');
 let buttonOne = document.getElementById('stepOne');
 google.charts.load('current',{packages:['corechart']});
-// google.charts.setOnLoadCallback(drawChart);
+google.charts.setOnLoadCallback(drawChart);
 
 /** Starting calculations from first entry fields */
 function stepOne(){
@@ -58,22 +58,22 @@ let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent
             </tr>
             <tr>
                 <td><p>Breakfast</p></td>
-                <td><input id=”breakfast”></td>
+                <td><input id="breakfast"></td>
                 <td>${percent25} / ${percent30}</td>
             </tr>
             <tr>
                 <td><p>Morning Snack</p></td>
-                <td><input id=”morningSnack”></td>
+                <td><input id="morningSnack"></td>
                 <td>${percent5} / ${percent10}</td>
             </tr>
             <tr>
                 <td><p>Lunch</p></td>
-                <td><input id=”lunch”></td>
+                <td><input id="lunch"></td>
                 <td>${percent35} / ${percent40}</td>
             </tr>
             <tr>
                 <td><p>Dinner </p></td>
-                <td><input id=”dinner”></td>
+                <td><input id="dinner"></td>
                 <td>${percent25} / ${percent30}</td>
             </tr>
         </table>`;
@@ -103,11 +103,11 @@ let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent
             <tr>
             </tr>
                 <td><p>Afternoon Snack </p></td>
-                <td><input id=afternoonSnack></td>
+                <td><input id="afternoonSnack"></td>
                 <td>${percent25} / ${percent30}</td>
             <tr>
                 <td><p>Dinner </p></td>
-                <td><input id=”dinner”></td>
+                <td><input id="dinner"></td>
                 <td>${percent25} / ${percent30}</td>
             </tr>
         </table>`;
@@ -131,50 +131,11 @@ function myFunction() {
  */
 
 
-/* alternative - Pie Chart from google charts
-* https://www.w3schools.com/js/js_graphics_google_chart.asp
-*/
-
-function drawChart(){
-var data = new google.visualization.DataTable();
-
-data.addColumn('string', 'Meal');
-data.addColumn('number', 'calories');
-data.addRows([
-  ['Breakfast',`${breakfast}`],
-  ['Morning Snack',`${morningSnack}`],
-  ['Lunch', 28],
-  ['Afternoon Snack', 27],
-  ['Dinner', 21],
-
-]);
-
-
-var options = {'title':'Calories intake for today:',
-// 'width': 600,
-// 'height':800};
-};
-var chart = new google.visualization.PieChart(document.getElementById('feedback-chart'));
-chart.draw(data, options);
-
-let graphDisplay = document.getElementById('feedback-chart');
-graphDisplay.style.display="block";
-}                      
-//     var chart = new google.visualization.PieChart(document.getElementById('myChart'));
-//     chart.draw(data, options);
-    
-//     }
-
-    /* to be changed for tablet&desktop mode*/
-    // var options = {
-    //     title: 'World Wide Wine Production',
-    //     is3D: true;
-
 function storeResults(){
     const breakfast = parseInt(document.getElementById('breakfast').value);
-    const morningSnack = parseInt(document.getElementById('morningSnack').value);
-    const lunch = parseInt(documnet.getElementById('lunch').value);
-    const afternoonSnack = parseInt (document.getElementById('afternoonSnack').value);
+    // const morningSnack = parseInt(document.getElementById('morningSnack').value);
+    const lunch = parseInt(document.getElementById('lunch').value);
+    // const afternoonSnack = parseInt (document.getElementById('afternoonSnack').value);
     const dinner = parseInt(document.getElementById('dinner').value);
     const date = document.getElementById('date').value;
     let store = JSON.parse(
@@ -186,7 +147,11 @@ function storeResults(){
     console.log(store);
     store[date] = {
         breakfast: breakfast,
-    }
+        // morningSnack: morningSnack,
+        lunch: lunch,
+        // afternoonSnack: afternoonSnack,
+        dinner: dinner,
+    };
     localStorage.setItem('dailys',JSON.stringify(store));
-    console.log(store['2022-07-26'])
+    console.log(store['2022-07-26']);
 }
