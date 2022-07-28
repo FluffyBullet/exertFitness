@@ -123,4 +123,7 @@ Without a value being entered into "Target" field, an error is generated on load
     * Tima Miroshnichenk, "small404" image - https://www.pexels.com/photo/a-person-holding-a-smartphone-on-a-pink-background-7009834/
 - w3 Schools
     * Responsive Navigation Bar, to display navigation with smaller screens in a compact format - https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
+    * Pie Chart settings to display values entered by the user - https://www.w3schools.com/ai/ai_chartjs.asp
+- Scheme Color
+    * Color scheme for pie charts on the calculator page - https://schemecolor.com
 ## <u>References</u>

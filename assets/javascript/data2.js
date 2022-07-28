@@ -1,7 +1,8 @@
 let stageTwo = document.getElementById('dataEntry');
 let buttonOne = document.getElementById('stepOne');
-google.charts.load('current',{packages:['corechart']});
+google.charts.load('current',{'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
+google.charts.setOnLoadCallback(compareChart);
 
 /** Starting calculations from first entry fields */
 function stepOne(){
@@ -9,7 +10,7 @@ function stepOne(){
 let name = document.getElementById('name').value;
 let tCal = parseInt(document.getElementById('target').value);
 let date = document.getElementById('date').value;
-let meals = document.getElementById('meals').value;
+let meals = parseInt(document.getElementById('meals').value);
 let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent40;
 
 /** Calculating values*/
@@ -37,17 +38,17 @@ let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent
             </tr>
             <tr>
                 <td><p>Lunch</p></td>
-                <td><input id="lunch" type ="number"></td>
+                <td><input id="lunch" type ="number" value="400"></td>
                 <td>${percent35} / ${percent40}</td>
             </tr>
             <tr>
                 <td><p>Dinner </p></td>
-                <td><input id="dinner" type="number"></td>
+                <td><input id="dinner" type="number" value="600"></td>
                 <td>${percent25} / ${percent35}</td>
             </tr>
         </table>
         <button onclick="drawChart()">Display Chart</button>
-        `;
+        `
     } else if (meals == 4){
         stageTwo.innerHTML=
         `<table>
@@ -130,58 +131,100 @@ function myFunction() {
  * https://spreadsheets.google.com/feeds/worksheets/1ISjmb4HrdaaqVw59y0SunxA3fGeX6WJywTnd2ke9oXI/public/basic?alt=json
  */
 
-function storeResults(){
-    
-    let store = JSON.parse(
-        localStorage.getItem('dailys')
-    );
-    if (store === null) {
-        store = {};
-    }
-    console.log(store);
-    store[date] = {
-        breakfast: breakfast,
-        // morningSnack: morningSnack,
-        lunch: lunch,
-        // afternoonSnack: afternoonSnack,
-        dinner: dinner,
-    };
-    localStorage.setItem('dailys',JSON.stringify(store));
-    console.log(store['2022-07-26']);
-}
 
 /* create of pie chart, taken from w3 Schools*/
 
 function drawChart(){
 
     const breakfast = document.getElementById('breakfast');
-    const lunch = parseInt(document.getElementById('lunch').value);
-    const dinner = parseInt(document.getElementById('dinner').value);
-    
-const barColors = [
-    "red",
-    "yellow",
-    "blue"
-];
+    const lunch = document.getElementById('lunch');
+    const dinner = document.getElementById('dinner');
+    const morningSnack = "0";
+    const afternoonSnack = "0";
+    if (meals == 4){ 
+        morningSnack = document.getElementById('morningSnack');
+        } else if (meals == 5){
+        const morningSnack = document.getElementById('morningSnack');
+        afternoonSnack = document.getElementById('afternoonSnack');
+        }
+    let totalValue = parseInt(breakfast.value) + parseInt(morningSnack) + parseInt(lunch.value) + parseInt(dinner.value);
+    console.log(morningSnack);
 
+    // console.log(totalValue);
+    const barColors = [
+        "#FCF5F0",
+        "#F5D8BB",
+        "#FDCF60",
+        "#F5B058",
+        "#D9993B",
+];
 new Chart("myChart", {
         type: "pie",
         data: {
-          labels: xValues = ["Breakfast","Lunch","Dinner"],
+          labels: xValues = ["Breakfast","morningSnack","Lunch","afternoonSnack","Dinner"],
           datasets: [{
             backgroundColor: barColors,
             data: yValues = [
                 `${parseInt(breakfast.value)}`,
-                `${parseInt()}`,600]
+                `${parseInt(morningSnack.value)}`,
+                `${parseInt(lunch.value)}`,
+                `${parseInt(afternoonSnack.value)}`,
+                `${parseInt(dinner.value)}`
+            ]
           }]
         },
         options: {
           title: {
             display: true,
-            text: "Calories taken today: "
+            text: `Calories taken today: ${totalValue}`
           }
         }
       });
 let displayChart = document.getElementById('feedback-chart');
 displayChart.style.display = "block"
-}
+    }
+
+    //* Logging of data and values on the local storage facility */ 
+    function storeResults(){
+        const breakfast = parseInt(document.getElementById('breakfast').value)
+        const lunch = parseInt(document.getElementById('lunch').value)
+        const dinner = parseInt(document.getElementById('dinner').value)
+        let date = document.getElementById('date');
+        let store = JSON.parse(
+            localStorage.getItem('dailys')
+        );
+        if (store === null) {
+            store = {};
+        }
+        console.log(store);
+        store[date.value] = {
+            breakfast: breakfast,
+            lunch: lunch,
+            dinner: dinner,
+        };
+        localStorage.setItem('dailys',JSON.stringify(store));
+        console.log(store['2022-07-28']);
+    } 
+
+    function compareChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Meal', 'Calories'],
+            JSON.parse(window.localStoarge.getItem('dailys'))
+        ])
+            // ['Director (Year)',  'Rotten Tomatoes', 'IMDB'],
+        //   ['Alfred Hitchcock (1935)', 8.4,         7.9],
+        //   ['Ralph Thomas (1959)',     6.9,         6.5],
+        //   ['Don Sharp (1978)',        6.5,         6.4],
+        //   ['James Hawes (2008)',      4.4,         6.2]
+        
+
+        var options = {
+          title: 'Historic Calorie consumption',
+          vAxis: {title: 'Calories'},
+          isStacked: true
+        };
+
+        var chart = new google.visualization.SteppedAreaChart(document.getElementById('chart_div'));
+
+        chart.draw(data, options);
+      }
