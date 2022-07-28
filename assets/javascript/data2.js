@@ -130,14 +130,8 @@ function myFunction() {
  * https://spreadsheets.google.com/feeds/worksheets/1ISjmb4HrdaaqVw59y0SunxA3fGeX6WJywTnd2ke9oXI/public/basic?alt=json
  */
 
-
 function storeResults(){
-    const breakfast = parseInt(document.getElementById('breakfast').value);
-    // const morningSnack = parseInt(document.getElementById('morningSnack').value);
-    const lunch = parseInt(document.getElementById('lunch').value);
-    // const afternoonSnack = parseInt (document.getElementById('afternoonSnack').value);
-    const dinner = parseInt(document.getElementById('dinner').value);
-    const date = document.getElementById('date').value;
+    
     let store = JSON.parse(
         localStorage.getItem('dailys')
     );
@@ -154,4 +148,40 @@ function storeResults(){
     };
     localStorage.setItem('dailys',JSON.stringify(store));
     console.log(store['2022-07-26']);
+}
+
+/* create of pie chart, taken from w3 Schools*/
+
+function drawChart(){
+
+    const breakfast = document.getElementById('breakfast');
+    const lunch = parseInt(document.getElementById('lunch').value);
+    const dinner = parseInt(document.getElementById('dinner').value);
+    
+const barColors = [
+    "red",
+    "yellow",
+    "blue"
+];
+
+new Chart("myChart", {
+        type: "pie",
+        data: {
+          labels: xValues = ["Breakfast","Lunch","Dinner"],
+          datasets: [{
+            backgroundColor: barColors,
+            data: yValues = [
+                `${parseInt(breakfast.value)}`,
+                `${parseInt()}`,600]
+          }]
+        },
+        options: {
+          title: {
+            display: true,
+            text: "Calories taken today: "
+          }
+        }
+      });
+let displayChart = document.getElementById('feedback-chart');
+displayChart.style.display = "block"
 }

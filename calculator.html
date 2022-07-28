@@ -11,7 +11,9 @@
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
         </style>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+        </script>
     </head>
     <body>
         <header>
@@ -80,7 +82,7 @@
             </div>
             <!--Google Charts and analysis of total calories consumed per day in stepped area chart and written values.-->
             <div id="feedback-chart">
-            
+                <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
             </div>
         </section>
         <footer>

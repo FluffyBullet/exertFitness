@@ -111,6 +111,7 @@ Without a value being entered into "Target" field, an error is generated on load
  2. If table allowed 3 and 4 to be displayed with different answers, but 5 was not showing
  3. Imported tables not showing headers
  4. Nav bar not extended to full width on calculator page.
+ 5. Values showing as object then string, despite logging parseInt.
 *********************
 
 ### Technologies used:
