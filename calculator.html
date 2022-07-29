@@ -33,9 +33,11 @@
         </header>
         <section>
             <!--Entry of name, date and target calories-->
-                <div id ="register">
-                    <label for="name" class="entry-header">Full Name:</label><br>
-                    <input type="text" id="name"><br><br>
+                <div id ="register" class="centered">
+                    <div class="group">
+                    <label for="name" class="entry-header name_input">Name:</label><br>
+                    <input type="text" id="name" autocomplete="false"/><br><br>
+                </div>
                     <label for="date" class="entry-header">Date:</label><br>
                     <input type="date" id="date"><br><br>
                     <label for="target" class="entry-header">Target</label><br>
@@ -85,7 +87,7 @@
                 <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
             </div>
             <div>
-                <button onclick="compareChart()"> Compare to past </button>
+                <button onclick="drawChart()"> Compare to past </button>
             </div>
             <div id="comparison-chart">
                 <canvas id="compareChart" style="width:100%;max-width:700px"></canvas>

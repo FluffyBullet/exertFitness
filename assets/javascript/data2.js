@@ -1,8 +1,8 @@
 let stageTwo = document.getElementById('dataEntry');
 let buttonOne = document.getElementById('stepOne');
-google.charts.load('current',{'packages':['corechart']});
+google.charts.load('current',{packages:['corechart']});
 google.charts.setOnLoadCallback(drawChart);
-google.charts.setOnLoadCallback(compareChart);
+
 
 /** Starting calculations from first entry fields */
 function stepOne(){
@@ -205,26 +205,3 @@ displayChart.style.display = "block"
         localStorage.setItem('dailys',JSON.stringify(store));
         console.log(store['2022-07-28']);
     } 
-
-    function compareChart() {
-        var data = google.visualization.arrayToDataTable([
-            ['Meal', 'Calories'],
-            JSON.parse(window.localStoarge.getItem('dailys'))
-        ])
-            // ['Director (Year)',  'Rotten Tomatoes', 'IMDB'],
-        //   ['Alfred Hitchcock (1935)', 8.4,         7.9],
-        //   ['Ralph Thomas (1959)',     6.9,         6.5],
-        //   ['Don Sharp (1978)',        6.5,         6.4],
-        //   ['James Hawes (2008)',      4.4,         6.2]
-        
-
-        var options = {
-          title: 'Historic Calorie consumption',
-          vAxis: {title: 'Calories'},
-          isStacked: true
-        };
-
-        var chart = new google.visualization.SteppedAreaChart(document.getElementById('chart_div'));
-
-        chart.draw(data, options);
-      }
