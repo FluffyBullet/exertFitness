@@ -34,49 +34,35 @@
         <section>
             <!--Entry of name, date and target calories-->
                 <div id ="register" class="centered">
-                    <div class="group">
-                    <label for="name" class="entry-header name_input">Name:</label><br>
-                    <input type="text" id="name" autocomplete="false"/><br><br>
-                </div>
-                    <label for="date" class="entry-header">Date:</label><br>
-                    <input type="date" id="date"><br><br>
-                    <label for="target" class="entry-header">Target</label><br>
-                    <input type="number" min="1" max="4000" id="target" value="2500">
-                    <p>calories</p><br>
-                    <label for="meals" class="entry-header">Meals per day: </label>
-                    <select name="meals" id="meals">
-                        <option value=3>3</option>
-                        <option value=4>4</option>
-                        <option value=5>5</option>
-                    </select><br><br>
+                    <div class="input-container">
+                    <input name="firstName" name="name" type="text" id="name" required>
+                    <label for="name">Name</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="date"name="date" id="date" required =""/>
+                        <label for="date">Date</label>
+                    </div>
+                    <div>
+                        <div class="input-container targetEntry split">
+                            <input type="number" min="1" max="4000" id="target" required>
+                            <label>Target</label>
+                            <p>calories</p>
+                        </div>
+                        <div class="input-container split">
+                        <label for="meals">Meals per day: </label><br><br>
+                        <select name="meals" id="meals" required>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                        </select>
+                        </div>
+                    </div>
                     <button id="stepOne" onclick="stepOne()">Next</button>
 
                 </div>
             <!--Providing information to documents on variable data/value's.-->
             <div id="dataEntry">
-                <!-- <table>
-                    <tr>
-                        <th>Meal</th>
-                        <th>Calories</th>
-                        <th>Target Range(Min/Max)</th>
-                    </tr>
-                    <tr>
-                        <td><p>Breakfast</p></td>
-                        <td><input type="number" id="breakfast"></td>
-                        <td>${percent30} / ${percent35}</td>
-                    </tr>
-                    <tr>
-                        <td><p>Lunch</p></td>
-                        <td><input id=”lunch” type ="number"></td>
-                        <td>${percent35} / ${percent40}</td>
-                    </tr>
-                    <tr>
-                        <td><p>Dinner </p></td>
-                        <td><input id=”dinner”></td>
-                        <td>${percent25} / ${percent35}</td>
-                    </tr>
-                </table> -->
-                
+               
             </div>
             <div>
                 <button onclick="drawChart()">Display Chart</button>

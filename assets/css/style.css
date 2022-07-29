@@ -100,66 +100,68 @@ display:none;
     }
   } 
 
-  /* Imported CSS */
+/* Styling of Input Labels */
 
-/* .group {
-  overflow:hidden;
-  position:relative;
+.input-container{
+	position:relative;
+  width:15%;
+  margin:0 auto;
+  margin-top:30px;
 }
-
-label {
-  cursor:text;
-  transition:0.25s ease;
+.input-container label{
+	position:absolute;
+	top:0px;
+	left:0px;
+	font-size:16px;
+	color:aqua;	
+	transition: all 0.5s ease-in-out;
+  overflow:hidden;
+}
+.input-container input{ 
+  border:0;
+  border-bottom:1px solid aqua;  
+  background:transparent;
+  width:100%;
+  padding:8px 0 5px 0;
+  font-size:16px;
   color:aqua;
-  position:absolute;
+
+}
+.input-container input:focus{ 
+ border:none;	
+ outline:none;
+ border-bottom:1px solid pink;	
+}
+
+.input-container input:focus ~ label,
+.input-container input:valid ~ label{
+	top:-12px;
+	font-size:12px;
+	color:pink;
   overflow:hidden;
-  
 }
 
-input {
-  border-style:none;
-  border-bottom: solid aqua 2px;
-  background:#131f2f;
-  border-bottom-style:solid 33% aqua;
-  color:pink;
-  transition: 0.3s ease;
-  height:15%;
-}
-input:valid {
-  border-bottom-color:aqua;
-}
-input:focus{ 
-  outline:none;
-  border-bottom-color:pink;
-}
-.bar:before {
-  transform: translateX(0);
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
 }
 
-.bar {
-  background-color:pink;
-  transform: translateX(-100%);
-  transition:0.3s ease;
-  margin-top: -2;
-  position:relative;
+input[type=date]:required:invalid::-webkit-datetime-edit {
+  color: transparent;
+}
+input[type=date]:focus::-webkit-datetime-edit {
+  color: aqua !important;
 }
 
-.bar:before {
-  content: "";
-  position:absolute;
-  width: 100%;
-  height:150%;
-  background-color:pink;
-  transform: translateX(-100%);
+.targetEntry {
+  width: 5%;
+  display:inline-block;
+  justify-content:start;
+  padding-left:0;
 }
 
-.input -webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px pink inset;
-  -webkit-text-fill-color: white !important;
-  bottom-border-color: aqua;
+.split {
+  width:5%;
+  display:inline-block;
 }
-
-.name_input:focus {
-  color:pink;
-  transition:0.3s;
-} */ */
