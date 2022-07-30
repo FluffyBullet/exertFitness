@@ -104,7 +104,7 @@ display:none;
 
 .input-container{
 	position:relative;
-  width:15%;
+  width:35%;
   margin:0 auto;
   margin-top:30px;
 }
@@ -155,13 +155,34 @@ input[type=date]:focus::-webkit-datetime-edit {
 }
 
 .targetEntry {
-  width: 5%;
+  width: 35%;
   display:inline-block;
   justify-content:start;
   padding-left:0;
 }
 
-.split {
+button {
+  margin:25px 0;
+  height:40px;
+  width:70px;
+  background-color:pink;
+  color:#131f2f;
+  font-family:'joan';
+  font-size:18px;
+}
+
+/* .split {
   width:5%;
   display:inline-block;
+} */
+
+
+table {
+  margin:0 auto;
+}
+table td {
+  border: groove;
+}
+table input {
+  width:50%;
 }

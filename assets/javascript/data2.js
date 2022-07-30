@@ -77,7 +77,9 @@ let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent
                 <td><input id="dinner"></td>
                 <td>${percent25} / ${percent30}</td>
             </tr>
-        </table>`;
+        </table>
+        <button onclick="drawChart()">Display Chart</button>
+        `;
     } else if (meals == 5){
         stageTwo.innerHTML=
         `<table>
@@ -116,6 +118,11 @@ let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent
         stageTwo.innerHTML = `
         <p>:( Something went wrong!</p> `;
     }
+
+        /** Updating of "next" button on calculator page */
+
+        let next = document.getElementById('stepOne');
+        next.innerText = "Update"
 }
 
 function myFunction() {
@@ -135,20 +142,21 @@ function myFunction() {
 /* create of pie chart, taken from w3 Schools*/
 
 function drawChart(){
-
+    let meals = parseInt(document.getElementById('meals').value);
     const breakfast = document.getElementById('breakfast');
     const lunch = document.getElementById('lunch');
     const dinner = document.getElementById('dinner');
-    const morningSnack = "0";
-    const afternoonSnack = "0";
+    let morningSnack;
+    let afternoonSnack;
     if (meals == 4){ 
         morningSnack = document.getElementById('morningSnack');
         } else if (meals == 5){
-        const morningSnack = document.getElementById('morningSnack');
+        morningSnack = document.getElementById('morningSnack');
         afternoonSnack = document.getElementById('afternoonSnack');
         }
-    let totalValue = parseInt(breakfast.value) + parseInt(morningSnack) + parseInt(lunch.value) + parseInt(dinner.value);
+    let totalValue = parseInt(breakfast.value) + parseInt(morningSnack.value) + parseInt(lunch.value) + parseInt(dinner.value);
     console.log(morningSnack);
+    console.log(typeof(afternoonSnack));
 
     // console.log(totalValue);
     const barColors = [
@@ -168,7 +176,7 @@ new Chart("myChart", {
                 `${parseInt(breakfast.value)}`,
                 `${parseInt(morningSnack.value)}`,
                 `${parseInt(lunch.value)}`,
-                `${parseInt(afternoonSnack.value)}`,
+                `${typeof(afternoonSnack) == 'undefined' ? '0' : parseInt(afternoonSnack.value)}`,
                 `${parseInt(dinner.value)}`
             ]
           }]
@@ -183,6 +191,7 @@ new Chart("myChart", {
 let displayChart = document.getElementById('feedback-chart');
 displayChart.style.display = "block"
     }
+
 
     //* Logging of data and values on the local storage facility */ 
     function storeResults(){
@@ -205,3 +214,4 @@ displayChart.style.display = "block"
         localStorage.setItem('dailys',JSON.stringify(store));
         console.log(store['2022-07-28']);
     } 
+
