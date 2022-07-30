@@ -1,7 +1,8 @@
 let stageTwo = document.getElementById('dataEntry');
 let buttonOne = document.getElementById('stepOne');
-google.charts.load('current',{packages:['corechart']});
+google.charts.load(current, {packages:['corechart']});
 google.charts.setOnLoadCallback(drawChart);
+google.charts.setOnLoadCallback(compareChart);
 
 
 /** Starting calculations from first entry fields */
@@ -193,7 +194,7 @@ displayChart.style.display = "block"
     }
 
 
-    //* Logging of data and values on the local storage facility */ 
+    // Logging of data and values on the local storage facility / 
     function storeResults(){
         const breakfast = parseInt(document.getElementById('breakfast').value)
         const lunch = parseInt(document.getElementById('lunch').value)
@@ -215,3 +216,60 @@ displayChart.style.display = "block"
         console.log(store['2022-07-28']);
     } 
 
+    function compareChart() {
+
+        const barColors = [
+            "#FCF5F0",
+            "#F5D8BB",
+            "#FDCF60",
+            "#F5B058",
+            "#D9993B",
+    ];
+    // console.log(totalValue);
+//     const barColors = [
+//         "#FCF5F0",
+//         "#F5D8BB",
+//         "#FDCF60",
+//         "#F5B058",
+//         "#D9993B",
+// ];
+new Chart("myChart", {
+        type: "line",
+        data: {
+          labels: xValues = ["Breakfast","morningSnack","Lunch","afternoonSnack","Dinner"],
+          datasets: [{
+            backgroundColor: barColors,
+            data: yValues = [
+                4,
+                22,
+                19,
+                10,
+                33
+            ]
+          }]
+        },
+        options: {
+          title: {
+            display: true,
+            text: `Calories taken today: test  `
+          }
+        }
+      });
+        // var data = google.visualization.arrayToDataTable([
+        //   ['Director (Year)',  'Rotten Tomatoes', 'IMDB'],
+        //   ['Alfred Hitchcock (1935)', 8.4,         7.9],
+        //   ['Ralph Thomas (1959)',     6.9,         6.5],
+        //   ['Don Sharp (1978)',        6.5,         6.4],
+        //   ['James Hawes (2008)',      4.4,         6.2]
+        // ]);
+
+        // var options = {
+        //   title: 'The decline of \'The 39 Steps\'',
+        //   vAxis: {title: 'Accumulated Rating'},
+        //   isStacked: true
+        // };
+
+        var chart = document.getElementById('chart_div');
+
+        chart.draw(data, options);
+      }
