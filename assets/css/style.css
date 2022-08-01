@@ -13,6 +13,10 @@ body {
 display:none;
 }
 
+#comparison-chart {
+  display:none;
+}
+
 /* Navigation bar taken from w3 Schools */
 .nav_style {
     overflow: hidden;

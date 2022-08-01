@@ -2,7 +2,7 @@ let stageTwo = document.getElementById('dataEntry');
 let buttonOne = document.getElementById('stepOne');
 google.charts.load(current, {packages:['corechart']});
 google.charts.setOnLoadCallback(drawChart);
-google.charts.setOnLoadCallback(compareChart);
+
 
 
 /** Starting calculations from first entry fields */
@@ -175,7 +175,7 @@ new Chart("myChart", {
             backgroundColor: barColors,
             data: yValues = [
                 `${parseInt(breakfast.value)}`,
-                `${parseInt(morningSnack.value)}`,
+                `${typeof(morningSnack) == 'undefined' ? '0' : parseInt(morningSnack.value)}`,
                 `${parseInt(lunch.value)}`,
                 `${typeof(afternoonSnack) == 'undefined' ? '0' : parseInt(afternoonSnack.value)}`,
                 `${parseInt(dinner.value)}`
@@ -216,3 +216,29 @@ displayChart.style.display = "block"
         console.log(store['2022-07-28']);
     } 
 
+
+    function compareChart() {
+        var dataTable = [
+          ["Country", "Population Density"],
+          ["Indonesia", 117],
+          ["China", 137],
+          ["Nigeria", 142],
+          ["Pakistan", 198],
+          ["India", 336],
+          ["Japan", 339],
+          ["Bangladesh", 1045]
+        ];
+        google.visualization.drawChart({
+          "containerId": "visualization_div",
+          "dataTable": dataTable,
+          "refreshInterval": 5,
+          "chartType": "Table",
+          "options": {
+            "alternatingRowStyle": true,
+            "showRowNumber" : true,
+          }
+        });
+        let compareCharts = document.getElementById('compare-chart');
+        compareCharts.style.display= "block";
+      }
+      google.charts.setOnLoadCallback(drawVisualization);
