@@ -218,13 +218,13 @@ buttonTwo.textContent = "Update Chart";
 // Swapping of visible Tiles for Testimonies in mobile view/
 
 // let activeTile = document.getElementsByClassName('testimony_tile_display')[0];
-let tileInfo = document.getElementsByClassName('testimony_tile');
-let active = document.getElementById('active');
-function nextTile(){
+// let tileInfo = document.getElementsByClassName('testimony_tile');
+// let active = document.getElementById('active');
+// function nextTile(){
 
-if (tileInfo.innerHTML == active)
-    for(let i = 0, i<tileInfo.length, i++){
-        i++,
-    } 
+// if (tileInfo.innerHTML == active)
+//     for(let i = 0, i<tileInfo.length, i++){
+//         i++,
+//     } 
 
-}
+// }
