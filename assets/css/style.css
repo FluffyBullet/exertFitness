@@ -82,6 +82,31 @@ display:none;
     display:none;
 }
 
+/* Navigation of tiles in index page for experience page*/
+.testimony_tile {
+  width:80%;
+  margin:0 auto;
+  height:300px;
+  border: outset 4px pink;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.testimony_tile p {
+  text-align:left;
+  padding:0 25px;
+
+}
+
+.tile_selection div{
+  display:inline-block;
+  width:40%;
+}
+
+.tile_selection button{
+  margin-top:0;
+  width:100%;
+}
 
 @media screen and (max-width: 600px) {
     .nav_style a:not(:first-child) {display: none;}

@@ -74,6 +74,17 @@ As a service tool, the website will include a feature to track and plan their ca
 
 ## <u>Expected Uses of Website</u>
 
+### Features for User Experience   
+To support the user navigation and use of my website, I have opted to update specific area's the customer will be using for more information:
+
+Updating of charts:
+As the button will need to display a command which either progresses to the next stage, or display a chart - having an icon display "next" or "display chart" is no longer relevant after the information has been dispayed. To counter this, the inner text has been edited within the mentioned buttons for a confirmation the action a re-click will product:
+<br>
+| Button     | Before       | After      |
+|-------|-------|-------|
+|Entry chart |<img src="assets/images/readme_files/stepOne_button_before.png" alt="button one display before being pressed">| <img src="assets/images/readme_files/stepOne_button_after.png" alt="button one display after being pressed" >|
+|Display Chart | <img src="assets/images/readme_files/before_display_chart.png" alt="button two before being pressed"> | <img src="assets/images/readme_files/after_display_chart.png" alt="button two after being pressed">|
+
 ## <u>Focus of the Project</u>
 *********************
 ## <u>Progression of Website</u>

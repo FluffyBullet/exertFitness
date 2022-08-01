@@ -133,11 +133,6 @@ function myFunction() {
       x.className = "nav_style";
     }
   }
-/** JS for fetching information from Google Spreadsheets API
- * Link is : https://docs.google.com/spreadsheets/d/1ISjmb4HrdaaqVw59y0SunxA3fGeX6WJywTnd2ke9oXI/edit?usp=sharing (editor rights)
- * https://spreadsheets.google.com/feeds/worksheets/1ISjmb4HrdaaqVw59y0SunxA3fGeX6WJywTnd2ke9oXI/public/basic?alt=json
- */
-
 
 // create of pie chart, taken from w3 Schools/
 
@@ -219,3 +214,17 @@ buttonTwo.textContent = "Update Chart";
         localStorage.setItem('dailys',JSON.stringify(store));
         console.log(store['2022-07-28']);
     } 
+
+// Swapping of visible Tiles for Testimonies in mobile view/
+
+// let activeTile = document.getElementsByClassName('testimony_tile_display')[0];
+let tileInfo = document.getElementsByClassName('testimony_tile');
+let active = document.getElementById('active');
+function nextTile(){
+
+if (tileInfo.innerHTML == active)
+    for(let i = 0, i<tileInfo.length, i++){
+        i++,
+    } 
+
+}
