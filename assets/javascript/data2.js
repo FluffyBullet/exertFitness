@@ -149,13 +149,17 @@ function drawChart(){
     const dinner = document.getElementById('dinner');
     let morningSnack;
     let afternoonSnack;
+
+    let totalValue = totalValue = parseInt(breakfast.value) + parseInt(lunch.value) + parseInt(dinner.value);;
     if (meals == 4){ 
         morningSnack = document.getElementById('morningSnack');
+        totalValue = parseInt(breakfast.value) + parseInt(morningSnack.value) + parseInt(lunch.value) + parseInt(dinner.value);
         } else if (meals == 5){
-        morningSnack = document.getElementById('morningSnack');
-        afternoonSnack = document.getElementById('afternoonSnack');
+            morningSnack = document.getElementById('morningSnack');
+            afternoonSnack = document.getElementById('afternoonSnack');
+            totalValue = parseInt(breakfast.value) + parseInt(morningSnack.value) + parseInt(lunch.value) + parseInt(afternoonSnack.value) + parseInt(dinner.value);
         }
-    let totalValue = parseInt(breakfast.value) + parseInt(morningSnack.value) + parseInt(lunch.value) + parseInt(dinner.value);
+    
     console.log(morningSnack);
     console.log(typeof(afternoonSnack));
 
@@ -215,30 +219,3 @@ displayChart.style.display = "block"
         localStorage.setItem('dailys',JSON.stringify(store));
         console.log(store['2022-07-28']);
     } 
-
-
-    function compareChart() {
-        var dataTable = [
-          ["Country", "Population Density"],
-          ["Indonesia", 117],
-          ["China", 137],
-          ["Nigeria", 142],
-          ["Pakistan", 198],
-          ["India", 336],
-          ["Japan", 339],
-          ["Bangladesh", 1045]
-        ];
-        google.visualization.drawChart({
-          "containerId": "visualization_div",
-          "dataTable": dataTable,
-          "refreshInterval": 5,
-          "chartType": "Table",
-          "options": {
-            "alternatingRowStyle": true,
-            "showRowNumber" : true,
-          }
-        });
-        let compareCharts = document.getElementById('compare-chart');
-        compareCharts.style.display= "block";
-      }
-      google.charts.setOnLoadCallback(drawVisualization);
