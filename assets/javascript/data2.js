@@ -45,7 +45,7 @@ let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent
                 <td>${percent25} / ${percent35}</td>
             </tr>
         </table>
-        <button onclick="drawChart()">Display Chart</button>
+        <button onclick="drawChart()" id="buttonTwo">Display Chart</button>
         `
     } else if (meals == 4){
         stageTwo.innerHTML=
@@ -76,7 +76,7 @@ let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent
                 <td>${percent25} / ${percent30}</td>
             </tr>
         </table>
-        <button onclick="drawChart()">Display Chart</button>
+        <button onclick="drawChart()" id="buttonTwo">Display Chart</button>
         `;
     } else if (meals == 5){
         stageTwo.innerHTML=
@@ -112,7 +112,7 @@ let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent
                 <td>${percent25} / ${percent30}</td>
             </tr>
         </table>
-        <button onclick="drawChart()">Display Chart</button>`;
+        <button onclick="drawChart()" id="buttonTwo">Display Chart</button>`;
         
     } else {
         stageTwo.innerHTML = `
@@ -187,12 +187,14 @@ new Chart("myChart", {
         options: {
           title: {
             display: true,
-            text: `Calories taken today: ${totalValue}`
+            text: `Calories consumed today: ${totalValue}`
           }
         }
       });
 let displayChart = document.getElementById('feedback-chart');
 displayChart.style.display = "block"
+let buttonTwo = document.getElementById('buttonTwo');
+buttonTwo.textContent = "Update Chart";
     }
 
 

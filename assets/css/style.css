@@ -176,6 +176,10 @@ button {
   font-size:18px;
 }
 
+#buttonTwo {
+  width:fit-content;
+}
+
 /* .split {
   width:5%;
   display:inline-block;

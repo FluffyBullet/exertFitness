@@ -106,12 +106,20 @@ Without a value being entered into "Target" field, an error is generated on load
 
 ## <u>Test & Bugs</u>
 ### Fixed
+ 1. Inner HTML removing instantly after applying function.
+    * Within the function, an HTML script was drafted to input on the page. As this was not pushed or appended to a variable listed above the information was removed causing the display to temporarily showing the expected result then dissapearing
+ 4. Nav bar not extended to full width on calculator page.
+    * Fix - this was caused by CSS Styling as the display was fit-content rather than fixing to screen width.
+ 5. Values showing as object then string, despite logging parseInt.
+    * Fix - Although input fields have been entered as number fields, the logging of .value stored into JS as an object.<br>
+    Whilst I was unable to correct this within minimal set of coding, I logged the input field as the variable, later passing the code with parseInt and .value attached - forcing the correct number Integer to be found.
+ 6. Input Labels are designed to move up on selection, when entered with a value the label will remain above the entry. But for "Target" entry, the label hides behind the input text causing an overlap.<br>
+    <img src="assets/images/readme_files/input_label_error.png" alt="Target value entered at 5000 but clashing with label of 'Target'"><br>
+    * Fix - this was found to be caused as the label was not associated with the input. Using the For tag with a matching ID links both fields together preventing the text to move back over/under the input value.
 ### Current Bugs
- 1. Inner HTML removing instantly after applying
  2. If table allowed 3 and 4 to be displayed with different answers, but 5 was not showing
  3. Imported tables not showing headers
- 4. Nav bar not extended to full width on calculator page.
- 5. Values showing as object then string, despite logging parseInt.
+ 7. Google Graphs not displaying - advised variable of google.visualization not defined
 *********************
 
 ### Technologies used:
@@ -127,3 +135,4 @@ Without a value being entered into "Target" field, an error is generated on load
 - Scheme Color
     * Color scheme for pie charts on the calculator page - https://schemecolor.com
 ## <u>References</u>
+- Jason Reynolds (Brother) - for the support and guidance whilst asking questions on how to find the answer and being my rubber duck.
