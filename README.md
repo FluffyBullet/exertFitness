@@ -110,6 +110,11 @@ Initial entry of name , date, target and meals are only visible on first load of
 <image src="assets/images/readme_files/startup_fields.png" alt="first load of window with limited entry fields" height="450px"> <br>
 Without a value being entered into "Target" field, an error is generated on loading of Exert Fitness web page as no value is in the variable "tCal" also proceeding to next stage displays Not A Number (NaN). As this will be a required field in future update but also enter a default value of 2,000 (reccomended daily allowance for females).
 
+
+Edit (Mobile Design)<br>
+To Improve customers user experience, prevent loading list of content and a long screen, I have edited the "testimonies" section of the index page. This now includes a display of single testimony with formatting and buttons below. Both buttons have a function of adding or removing value of 1 to the testimony, displaying the next set of text.
+
+
 #### Final stage
 #### Future developments
  1. Objective and target board to be included as part of an app/login feature. (research 1, Routine)
@@ -145,5 +150,7 @@ Without a value being entered into "Target" field, an error is generated on load
     * Pie Chart settings to display values entered by the user - https://www.w3schools.com/ai/ai_chartjs.asp
 - Scheme Color
     * Color scheme for pie charts on the calculator page - https://schemecolor.com
+- Project Idea
+    * Egle Ratkeviviute, for use of her Personal training business and adapting expectations to meet website creation and project criteria. 
 ## <u>References</u>
 - Jason Reynolds (Brother) - for the support and guidance whilst asking questions on how to find the answer and being my rubber duck.
