@@ -72,7 +72,8 @@
             <h2>
                 <u>Testimonies</u>
             </h2>
-            <div class="testimony_tile" id="activeTest">
+            <div id="testimony_display">
+            <div class="testimony_tile">
                 <h3>Eric's experience:</h3>
                 <p>When I met Egle, I was 8 stone (around 43kg) overweight. I was completely lost and felt like there was nothing I would ever be able to do to change myself. 
                     But Egle helped me to make that first leap into losing weight and pushed me to keep going. I’ve lost 6 stone with her help. 
@@ -96,8 +97,9 @@
                 <h3>Rachel's experience:</h3>
                 <p>Egle is great. When I first came to the gym, I was skinny and intimidated by the equipment. With Egle’s knowledge of nutrition and training, I’ve gained ……..kg and my strength has really improved.</p>
             </div>
+        </div>
             <div class="tile_selection">
-                <div class="tile_navigation"> <button id="lastTile"> &#60; Previous</button></div>
+                <div class="tile_navigation"> <button id="lastTile" onclick="prevTile()"> &#60; Previous</button></div>
                 <div class="tile_navigation"><button id="nextTile" onclick="nextTile()">Next &#62;</button></div>
             </div>
         </section>

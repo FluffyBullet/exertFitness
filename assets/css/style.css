@@ -88,9 +88,9 @@ display:none;
   margin:0 auto;
   height:300px;
   border: outset 4px pink;
-  /* display:flex;
+  display:flex;
   flex-direction:column;
-  justify-content:center; */
+  justify-content:center;
   display:none;
 }
 .testimony_tile p {
@@ -222,6 +222,7 @@ table input {
   width:50%;
 }
 
-#activeTest {
+#testimony_display{ 
   display:block;
+
 }

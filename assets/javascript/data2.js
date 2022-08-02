@@ -1,7 +1,43 @@
+// Swapping of visible Tiles for Testimonies in mobile view
+let n = 0;
+var activeTestimony = document.getElementsByClassName('testimony_tile')[`${n}`];
+let testimonyParent = document.getElementById('testimony_display');
+function nextTile(){
+    n = n + 1;
+    if (n === 5){
+        n = 5- n;
+    }
+    activeTestimony.style.display = "none";
+    // n = n + 1;
+    console.log(n);
+   
+    activeTestimony = testimonyParent.children[`${n}`];
+    activeTestimony.style.display = "block";
+    console.log(activeTestimony);
+}
+function prevTile(){
+    n = n - 1;
+    if (n === 0-1){
+        n = 4;
+    }
+    activeTestimony.style.display = "none";
+    console.log(n);
+    
+    
+ 
+    activeTestimony = testimonyParent.children[`${n}`];
+    activeTestimony.style.display = "block";
+    console.log(activeTestimony);
+}
+
+
+activeTestimony.style.display="block";
+
 google.charts.load(current, {packages:['corechart']});
 google.charts.setOnLoadCallback(drawChart);
 
-// Starting calculations from first entry fields */
+
+// Starting calculations from first entry fields 
 function stepOne(){
     //Declaring variables for calculations /
 let stageTwo = document.getElementById('dataEntry');
@@ -134,7 +170,7 @@ function myFunction() {
     }
   }
 
-// create of pie chart, taken from w3 Schools/
+// create of pie chart, taken from w3 Schools
 
 function drawChart(){
     let meals = parseInt(document.getElementById('meals').value);
@@ -193,7 +229,7 @@ buttonTwo.textContent = "Update Chart";
     }
 
 
-    // Logging of data and values on the local storage facility / 
+    // Logging of data and values on the local storage facility
     function storeResults(){
         const breakfast = parseInt(document.getElementById('breakfast').value)
         const lunch = parseInt(document.getElementById('lunch').value)
@@ -215,12 +251,4 @@ buttonTwo.textContent = "Update Chart";
         console.log(store['2022-07-28']);
     } 
 
-// Swapping of visible Tiles for Testimonies in mobile view/
 
-let activeTile = document.getElementsByClassName('testimony_tile_display')[0];
-let tileInfo = document.getElementsByClassName('testimony_tile');
-let displayed = document.getElementById('activeTest');
-function nextTile(){
-displayed.nextElementSibling.style.display = "block";
-alert("This button works");
-}
