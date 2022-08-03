@@ -13,9 +13,6 @@ body {
 display:none;
 }
 
-#comparison-chart {
-  display:none;
-}
 
 /* Navigation bar taken from w3 Schools */
 .nav_style {
@@ -70,7 +67,7 @@ display:none;
     margin:0 auto;
 }
 
-#greeting_left {
+#greeting-left {
     background-image:url("../images/personal_image_small.jpeg");
     height:200px;
     background-repeat:no-repeat;
@@ -78,12 +75,12 @@ display:none;
     
 }
 
-#personal_memo {
+#personal-memo {
     display:none;
 }
 
 /* Navigation of tiles in index page for experience page*/
-.testimony_tile {
+.testimony-tile {
   width:80%;
   margin:0 auto;
   height:300px;
@@ -93,18 +90,18 @@ display:none;
   justify-content:center;
   display:none;
 }
-.testimony_tile p {
+.testimony-tile p {
   text-align:left;
   padding:0 25px;
 
 }
 
-.tile_selection div{
+.tile-selection div{
   display:inline-block;
   width:40%;
 }
 
-.tile_selection button{
+.tile-selection button{
   margin-top:0;
   width:100%;
 }
@@ -115,6 +112,13 @@ display:none;
       float: right;
       display: block;
     }
+    #greeting-left {
+      background-image:url("../images/personal_image_small.jpeg");
+      height:200px;
+      background-repeat:no-repeat;
+      background-position:50% 30%;
+    }
+
   }
   
   @media screen and (max-width: 600px) {
@@ -206,11 +210,6 @@ button {
   width:fit-content;
 }
 
-/* .split {
-  width:5%;
-  display:inline-block;
-} */
-
 
 table {
   margin:0 auto;
@@ -222,7 +221,53 @@ table input {
   width:50%;
 }
 
-#testimony_display{ 
-  display:block;
-
+#greeting_right {
+  margin: 0 10%;
 }
+
+#location_text a {
+  text-decoration:underline;
+  color:pink;
+}
+
+ /* Adjusting screen sizes */
+
+ /* for Tablet design */
+ @media screen and (min-width:740px) {
+/* Landing page*/
+  .nav_style a {
+    display:inline-block;
+    float:inherit;
+  }
+  #greeting-left {
+    width:35%;
+    margin-left:5%;
+    height:475px;
+    background-position:50% 30%;
+    display:inline-block;
+    float:left;
+  }
+
+  #greeting-right {
+  width:50%;
+  display:inline-block;
+  clear:both;
+  }
+  #greeting-right p {
+  margin:0;
+  }
+
+  #testimony {
+    clear:both;
+    margin-top:15%;
+  }
+  #testimony-display {
+    width:55%;
+    margin:0 auto;
+  }
+  .tile-selection {
+    width:55%;
+    margin:0 auto;
+  }
+
+ }
