@@ -145,6 +145,7 @@ To Improve customers user experience, prevent loading list of content and a long
 ## <u>Acknowledgements</u>
 - Pexel Images
     * Tima Miroshnichenk, "small404" image - https://www.pexels.com/photo/a-person-holding-a-smartphone-on-a-pink-background-7009834/
+    * Kindel Media, "aqua_clock" image - https://www.pexels.com/photo/an-alarm-clock-with-pink-background-7054531/
 - w3 Schools
     * Responsive Navigation Bar, to display navigation with smaller screens in a compact format - https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
     * Pie Chart settings to display values entered by the user - https://www.w3schools.com/ai/ai_chartjs.asp

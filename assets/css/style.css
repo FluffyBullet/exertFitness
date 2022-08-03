@@ -8,11 +8,9 @@ body {
 
 }
 
-
 #feedback-chart{
 display:none;
 }
-
 
 /* Navigation bar taken from w3 Schools */
 .nav_style {
@@ -73,6 +71,10 @@ display:none;
     background-repeat:no-repeat;
     background-position:50% 30%;
     
+}
+
+#contact-clock img{
+width:100%;
 }
 
 #personal-memo {
@@ -228,6 +230,23 @@ table input {
 #location_text a {
   text-decoration:underline;
   color:pink;
+  font-weight:600;
+}
+
+#fees hr {
+  color:pink;
+  font-weight: 100;
+  width:70%
+}
+
+#fees td{
+  border:none;
+}
+
+#fees p {
+  width:70%;
+  margin:0 auto;
+  padding-bottom:25px;
 }
 
  /* Adjusting screen sizes */
@@ -270,4 +289,35 @@ table input {
     margin:0 auto;
   }
 
+  /* Location and fee's page (details) */
+  #location iframe {
+    width:70%;
+  }
+  #contact-container {
+    height:200px;
+    display:flex;
+    justify-content:center;
+    clear:both;
+  }
+  #contact-clock{
+    width:45%;
+    display:inline-block;
+    height:197.7px;
+    position:relative;
+   }
+  #contact-clock img{
+    width:350px;
+    border-radius:8px;
+    display:inline-block;
+    margin-right:10%;
+  }
+  #hours {
+    display:inline-block;
+    width:300px;
+    height:197.7px;
+    border-top: solid 2px pink;
+    border-bottom: solid 2px pink;
+    justify-content:center;
+    padding-left:15px;
+  }
  }
