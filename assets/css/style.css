@@ -8,6 +8,10 @@ body {
 
 }
 
+h2 {
+  text-decoration:underline;
+}
+
 #feedback-chart{
 display:none;
 }
@@ -319,5 +323,8 @@ table input {
     border-bottom: solid 2px pink;
     justify-content:center;
     padding-left:15px;
+  }
+  #hours p {
+    margin-top:5px;
   }
  }

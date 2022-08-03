@@ -115,6 +115,13 @@ Edit (Mobile Design)<br>
 To Improve customers user experience, prevent loading list of content and a long screen, I have edited the "testimonies" section of the index page. This now includes a display of single testimony with formatting and buttons below. Both buttons have a function of adding or removing value of 1 to the testimony, displaying the next set of text.
 
 
+During the website creation, I use have used w3 Validator (HMTL) to eliminate any errors with codes that may occur. i.e meta tags including irrelivant information.
+    log - 3/8/22, meta tags updated removing excess tags for UTF charset selection and stylesheet.
+    updating of tag closures on location/details page and updating Meta tags.
+
+In addition to W3 HTML Validator, I've also checked CSS Validator W3 Jigsaw, confirming no errors were found at this stage.
+
+
 #### Final stage
 #### Future developments
  1. Objective and target board to be included as part of an app/login feature. (research 1, Routine)

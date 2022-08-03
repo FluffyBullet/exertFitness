@@ -31,8 +31,6 @@ function prevTile(){
 }
 
 
-activeTestimony.style.display="block";
-
 google.charts.load(current, {packages:['corechart']});
 google.charts.setOnLoadCallback(drawChart);
 
@@ -82,7 +80,7 @@ let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent
             </tr>
         </table>
         <button onclick="drawChart()" id="buttonTwo">Display Chart</button>
-        `
+        `;
     } else if (meals == 4){
         stageTwo.innerHTML=
         `<table>
@@ -158,7 +156,7 @@ let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent
         // Updating of "next" button on calculator page /
 
         let next = document.getElementById('stepOne');
-        next.innerText = "Update"
+        next.innerText = "Update";
 }
 
 function myFunction() {
@@ -180,7 +178,7 @@ function drawChart(){
     let morningSnack;
     let afternoonSnack;
 
-    let totalValue = parseInt(breakfast.value) + parseInt(lunch.value) + parseInt(dinner.value);;
+    let totalValue = parseInt(breakfast.value) + parseInt(lunch.value) + parseInt(dinner.value);
     if (meals == 4){ 
         morningSnack = document.getElementById('morningSnack');
         totalValue = parseInt(breakfast.value) + parseInt(morningSnack.value) + parseInt(lunch.value) + parseInt(dinner.value);
@@ -223,7 +221,7 @@ new Chart("myChart", {
         }
       });
 let displayChart = document.getElementById('feedback-chart');
-displayChart.style.display = "block"
+displayChart.style.display = "block";
 let buttonTwo = document.getElementById('buttonTwo');
 buttonTwo.textContent = "Update Chart";
     }
@@ -231,9 +229,9 @@ buttonTwo.textContent = "Update Chart";
 
     // Logging of data and values on the local storage facility
     function storeResults(){
-        const breakfast = parseInt(document.getElementById('breakfast').value)
-        const lunch = parseInt(document.getElementById('lunch').value)
-        const dinner = parseInt(document.getElementById('dinner').value)
+        const breakfast = parseInt(document.getElementById('breakfast').value);
+        const lunch = parseInt(document.getElementById('lunch').value);
+        const dinner = parseInt(document.getElementById('dinner').value);
         let date = document.getElementById('date');
         let store = JSON.parse(
             localStorage.getItem('dailys')
