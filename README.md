@@ -5,7 +5,7 @@
 - [Research](#Research)
 - [Approach](#Approach)
 - [Design](#Designing-of-the-Website)
-    - [Strucutre](#structure-of-the-site)
+    - [Structure](#structure-of-the-site)
     - [Colors](#color-scheme)
     - [Fonts](#font-selection)
     - [View - Mobile](#mobile-design)
@@ -23,14 +23,14 @@
 - [References](#references)
 ********************
 ## <u>Introduction</u>
-This website is created for my friend Egle Ratkeviciute, who is expanding and advertising services of personal training for people within Coventry City, United Kingdom. To offer a unique service for Egle's clientell and utilize my requirement of Project 2 for my Level 5 diploma through Code Instistute. The websites requirements will need to display a friendly/approachable service with listings of capabilities and benefits offered to the user.
+This website is created for my friend Egle Ratkeviciute, who is expanding and advertising services of personal training for people within Coventry City, United Kingdom. To offer a unique service for Egle's clientele and utilize my requirement of Project 2 for my Level 5 diploma through Code Institute. The websites requirements will need to display a friendly/approachable service with listings of capabilities and benefits offered to the user.
 
-As a service tool, the website will include a feature to track and plan their calories intake. Offering a unqiue benefit over local competition.
+As a service tool, the website will include a feature to track and plan their calories intake. Offering a unique benefit over local competition.
 
 ## <u>Research</u>
 1. characteristics of personal trainers
     * Routine
-        1. For personal trainers to optimize their clients muscle growth, a schedule is created with the client for type of excersizes, daily routine and removal of bad-habits.
+        1. For personal trainers to optimize their clients muscle growth, a schedule is created with the client for type of excercises, daily routine and removal of bad-habits.
             1. This feature can be met with an "objectives" chart or progression feedback at a later stage of the website application. 
     * Consumption
         1. A huge impactor to personal training and gaining muscle is the balance of consumption. A Healthy maintenance of weight and muscles requires Women to consume approximately 2,000 calories per day and Men to consume 2,500 calories per day.<br>
@@ -38,7 +38,7 @@ As a service tool, the website will include a feature to track and plan their ca
         2. Browsing over websites, several guides have included the reason for calories, how to count calories or even types of food, i.e protein.
         website [www.omnicalculator.com/health/meal-calorie#how-many-calories-per-meal-should-i-eat](https://www.omnicalculator.com/health/meal-calorie#how-many-calories-per-meal-should-i-eat)
             note as I was previously researching this website was displayed as an information/blog post. since this has been created as a calculator too. My coding has not been influenced from this website.
-    * Excersize
+    * Exercise
 2. Identification of uses
 3. Information/Methods required
 
@@ -46,19 +46,19 @@ As a service tool, the website will include a feature to track and plan their ca
 
 ## <u>Designing of the Website</u>
    ### Structure of the site
-   I've chosen the site to have a clear and easy to use navigation hosted over 3 seperate pages.<br>
+   I've chosen the site to have a clear and easy to use navigation hosted over 3 separate pages.<br>
    <strong>Page 1</strong>
    This page is the main introduction to the companies website. Overall image should be friendly, informative and proving why the potential client should progress further.<br>
    <strong>Page 2</strong>
-   Allowing the user to view the services provided more in-depth with prcing details and locations or accessibility. Informtion should still be simple and easy to use, making decisive (locational) information available at the start.<br>
+   Allowing the user to view the services provided more in-depth with pricing details and locations or accessibility. Information should still be simple and easy to use, making decisive (locational) information available at the start.<br>
    <strong>Page 3</strong>
-   Final page is a resource used during training/logging, allowing users to check their calorie intakes. With this feature on the main website free for all to use, the information provided may help gain clientell (as their information will be tracked on a spreadsheet) whilst providing a guide to the user of estimated calories for the dedicated meals.
+   Final page is a resource used during training/logging, allowing users to check their calorie intakes. With this feature on the main website free for all to use, the information provided may help gain clientele (as their information will be tracked on a spreadsheet) whilst providing a guide to the user of estimated calories for the dedicated meals.
 
    ### Color Scheme
    1. Exert Fitness had previously created a logo, presenting a color-scheme for the company and how it is displayed. This was originally Dark Blue and Red, but since changed with consultation with designing artist. This since changed to the current light blue for the male models and light pink on the female models, overall making more approachable for both/all genders.
-    1. Testing the font of pink against the dark blue background of the logo (color #131f2f), color contrast and accesibility has provided a good level.
+    1. Testing the font of pink against the dark blue background of the logo (color #131f2f), color contrast and accessibility has provided a good level.
    ### Font Selection
-   Browsing wesbites availalbe,  I found Googles examples of serif family - providing a clear and strong fonts with an elegant finish. 
+   Browsing wesbite's available,  I found Googles examples of serif family - providing a clear and strong fonts with an elegant finish. 
    ### Mobile Design
    For mobile phones, the width of screens are limited with widths and selection area. To counter this, the wireframe created follows a simple flow with exception of two fields where the image is related to the information adjacent and less volume.<br>
    <img src = "assets/images/readme_files/mobile_view.png" alt = "Design for mobile screens" height="450px">
@@ -78,7 +78,7 @@ As a service tool, the website will include a feature to track and plan their ca
 To support the user navigation and use of my website, I have opted to update specific area's the customer will be using for more information:
 
 Updating of charts:
-As the button will need to display a command which either progresses to the next stage, or display a chart - having an icon display "next" or "display chart" is no longer relevant after the information has been dispayed. To counter this, the inner text has been edited within the mentioned buttons for a confirmation the action a re-click will product:
+As the button will need to display a command which either progresses to the next stage, or display a chart - having an icon display "next" or "display chart" is no longer relevant after the information has been displayed. To counter this, the inner text has been edited within the mentioned buttons for a confirmation the action a re-click will product:
 <br>
 | Button     | Before       | After      |
 |-------|-------|-------|
@@ -86,15 +86,19 @@ As the button will need to display a command which either progresses to the next
 |Display Chart | <img src="assets/images/readme_files/before_display_chart.png" alt="button two before being pressed"> | <img src="assets/images/readme_files/after_display_chart.png" alt="button two after being pressed">|
 
 ## <u>Focus of the Project</u>
+
+### The JavaScript Journey
+
+
 *********************
 ## <u>Progression of Website</u>
 ### Start
 The skeleton of the created website was drafted and agreed with Egle (company owner), which also listed required paragraphs with required content. Egle reached out to her friend who created the blogs and bio's.
 
-To ensure it's contents is relatable, a comparison of personal trainers websites for layouts, featured text and page contents were generated. Whilst researching layouts and content, a note was also made regarding target clientell and what they feature.<br>
+To ensure it's contents is relatable, a comparison of personal trainers websites for layouts, featured text and page contents were generated. Whilst researching layouts and content, a note was also made regarding target clientele and what they feature.<br>
 To create a unique selling point of the website/service provided, I found an algorithm which breaks down target calories to % of the total. Maximizing calories intakes for good health and well being (eating 50% of your target calories during the final meal of the day equal to doubling the target calories as your body stores the excess fats/energy).
 
-On startup of the business, Egle had a logo created which included a shield with a male and female figure. The male figure was in a light blue whilst the female side was in a dark red. Reviewing at a later stage, this was edited (by Egle) as the red was too bright/aggressive for a color scheme but wanted something more friendly, resulting in the light blue and pink color scheme.<br>
+On start-up of the business, Egle had a logo created which included a shield with a male and female figure. The male figure was in a light blue whilst the female side was in a dark red. Reviewing at a later stage, this was edited (by Egle) as the red was too bright/aggressive for a color scheme but wanted something more friendly, resulting in the light blue and pink color scheme.<br>
 This allowed me to feature the logo's colors as the website schemes. 
 
 #### Mid-project
@@ -108,14 +112,14 @@ The main focus of my project has three stages to be completed.
 First two sections have now been created, 
 Initial entry of name , date, target and meals are only visible on first load of the screen :<br>
 <image src="assets/images/readme_files/startup_fields.png" alt="first load of window with limited entry fields" height="450px"> <br>
-Without a value being entered into "Target" field, an error is generated on loading of Exert Fitness web page as no value is in the variable "tCal" also proceeding to next stage displays Not A Number (NaN). As this will be a required field in future update but also enter a default value of 2,000 (reccomended daily allowance for females).
+Without a value being entered into "Target" field, an error is generated on loading of Exert Fitness web page as no value is in the variable "tCal" also proceeding to next stage displays Not A Number (NaN). As this will be a required field in future update but also enter a default value of 2,000 (recommended daily allowance for females).
 
 
 Edit (Mobile Design)<br>
 To Improve customers user experience, prevent loading list of content and a long screen, I have edited the "testimonies" section of the index page. This now includes a display of single testimony with formatting and buttons below. Both buttons have a function of adding or removing value of 1 to the testimony, displaying the next set of text.
 
 
-During the website creation, I use have used w3 Validator (HMTL) to eliminate any errors with codes that may occur. i.e meta tags including irrelivant information.
+During the website creation, I use have used w3 Validator (HMTL) to eliminate any errors with codes that may occur. i.e meta tags including irrelevant information.
     log - 3/8/22, meta tags updated removing excess tags for UTF charset selection and stylesheet.
     updating of tag closures on location/details page and updating Meta tags.
 
@@ -130,7 +134,7 @@ In addition to W3 HTML Validator, I've also checked CSS Validator W3 Jigsaw, con
 ## <u>Test & Bugs</u>
 ### Fixed
  1. Inner HTML removing instantly after applying function.
-    * Within the function, an HTML script was drafted to input on the page. As this was not pushed or appended to a variable listed above the information was removed causing the display to temporarily showing the expected result then dissapearing
+    * Within the function, an HTML script was drafted to input on the page. As this was not pushed or appended to a variable listed above the information was removed causing the display to temporarily showing the expected result then disapearing
  4. Nav bar not extended to full width on calculator page.
     * Fix - this was caused by CSS Styling as the display was fit-content rather than fixing to screen width.
  5. Values showing as object then string, despite logging parseInt.
