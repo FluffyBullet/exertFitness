@@ -253,6 +253,15 @@ table input {
   padding-bottom:25px;
 }
 
+#myChart {
+  margin:0 auto;
+}
+
+#add-store {
+  width:fit-content;
+  margin:25px auto;
+}
+
  /* Adjusting screen sizes */
 
  /* for Tablet design */

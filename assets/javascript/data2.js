@@ -1,3 +1,14 @@
+// Navigation Bar reactive with hamburger menu - taken from W3 schools
+
+function myFunction() {
+    var x = document.getElementById("navHamburger");
+    if (x.className === "nav_style") {
+      x.className += " responsive";
+    } else {
+      x.className = "nav_style";
+    }
+  }
+
 // Swapping of visible Tiles for Testimonies in mobile view
 let n = 0;
 var activeTestimony = document.getElementsByClassName('testimony-tile')[`${n}`];
@@ -155,17 +166,7 @@ let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent
         next.innerText = "Update";
 }
 
-function myFunction() {
-    var x = document.getElementById("navHamburger");
-    if (x.className === "nav_style") {
-      x.className += " responsive";
-    } else {
-      x.className = "nav_style";
-    }
-  }
-
 // create of pie chart, taken from w3 Schools
-
 function drawChart(){
     let meals = parseInt(document.getElementById('meals').value);
     const breakfast = document.getElementById('breakfast');
@@ -173,7 +174,6 @@ function drawChart(){
     const dinner = document.getElementById('dinner');
     let morningSnack;
     let afternoonSnack;
-
     let totalValue = parseInt(breakfast.value) + parseInt(lunch.value) + parseInt(dinner.value);
     if (meals == 4){ 
         morningSnack = document.getElementById('morningSnack');
@@ -183,10 +183,6 @@ function drawChart(){
             afternoonSnack = document.getElementById('afternoonSnack');
             totalValue = parseInt(breakfast.value) + parseInt(morningSnack.value) + parseInt(lunch.value) + parseInt(afternoonSnack.value) + parseInt(dinner.value);
         }
-    
-    console.log(morningSnack);
-    console.log(typeof(afternoonSnack));
-
     const barColors = [
         "#FCF5F0",
         "#F5D8BB",
@@ -220,6 +216,9 @@ let displayChart = document.getElementById('feedback-chart');
 displayChart.style.display = "block";
 let buttonTwo = document.getElementById('buttonTwo');
 buttonTwo.textContent = "Update Chart";
+
+let addStore = document.getElementById('add-store');
+addStore.addEventListener('click',storeResults());
     }
 
 
@@ -235,14 +234,37 @@ buttonTwo.textContent = "Update Chart";
         if (store === null) {
             store = {};
         }
-        console.log(store);
         store[date.value] = {
             breakfast: breakfast,
             lunch: lunch,
             dinner: dinner,
         };
         localStorage.setItem('dailys',JSON.stringify(store));
-        console.log(store['2022-07-28']);
     } 
 
+    
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    
+    function drawChart1() {
+          //recalling of data stored in local storage
+          let results = localStorage.getItem('dailys');
+          console.log(JSON.parse(results));
+        var data = google.visualization.arrayToDataTable([
+          ['Director (Year)',  'Rotten Tomatoes', 'IMDB'],
+          ['Alfred Hitchcock (1935)', 8.4,         7.9],
+          ['Ralph Thomas (1959)',     6.9,         6.5],
+          ['Don Sharp (1978)',        6.5,         6.4],
+          ['James Hawes (2008)',      4.4,         6.2]
+        ]);
 
+        var options = {
+          title: 'The decline of \'The 39 Steps\'',
+          vAxis: {title: 'Accumulated Rating'},
+          isStacked: true
+        };
+
+        var chart = new google.visualization.SteppedAreaChart(document.getElementById('chart_div'));
+
+        chart.draw(data, options);
+      }

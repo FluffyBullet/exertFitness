@@ -192,9 +192,13 @@ In addition to W3 HTML Validator, I've also checked CSS Validator W3 Jigsaw, con
 - w3 Schools
     * Responsive Navigation Bar, to display navigation with smaller screens in a compact format - https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
     * Pie Chart settings to display values entered by the user - https://www.w3schools.com/ai/ai_chartjs.asp
+- log rocket
+    * website used for studying of local storage retreival. - https://blog.logrocket.com/storing-retrieving-javascript-objects-localstorage/
 - Scheme Color
     * Color scheme for pie charts on the calculator page - https://schemecolor.com
 - Project Idea
     * Egle Ratkeviviute, for use of her Personal training business and adapting expectations to meet website creation and project criteria. 
+- various undocumented websites
+    * Used to view methodology and understanding of JavaScript and how they are used. 
 ## <u>References</u>
 - Jason Reynolds (Brother) - for the support and guidance whilst asking questions on how to find the answer and being my rubber duck.
