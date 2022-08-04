@@ -88,6 +88,34 @@ As the button will need to display a command which either progresses to the next
 ## <u>Focus of the Project</u>
 
 ### The JavaScript Journey
+Learning with JavaScript has been tough from the begining, but finding more use of dev tools and console log there was an gradual level of understanding and it's application. The website features three main sections coded or reliant on JavaScript to function as intended.
+
+1. Nav Bar
+When a specific max-width is trigged for display of the webiste, JavaScript reduce the navigation bar from three hyper links (seperate pages) to the current page and hamburger menu. Clicking on the hamburger menu acts as a dropdown, which uses JavaScripts onclick function.<br>
+<img src="assets/images/readme_files/nav_bar_active.png" alt="screenshot of navigation bar clicked within mobile simulation"><br>
+Implementing this JavaScript Function was more copied with minor edits from W3 Schools website - mentioned in the [Acknowledgements](#Acknowledgements) section below.
+
+2. Testimony Tile  
+Rather than displaying a list of testimonies posted by users/clients, I re-drawn the idea testimonies can be placed on Tiles that can be rotated (almost carousel like). 
+To achieve this, each testimony were created with a set class (testimony-tile). This class will have a default CSS Style hiding the documents (display:none)
+Javascript is used in this block to declare a variable of element with a Class Name specifying a numerical target. The numerical target within the variable is another variable determining which "tile" is selected. <br>
+<img src="assets/images/readme_files/testimony_tile.png" alt="screenshot of testimony tile with navigation buttons below"><br>
+At the bottom of the tile, two buttons adjust the numeric value inserted to the variable for tile selection. For this, each each offered a function of on click then add or subtract 1, updating the numeric value outside the function. 
+This variable is then called with .style function of JavaScript to edit it's display fuction to Block, navigating through the Parent divisions children.
+
+3. Calculator entry and analtyics  
+Each inputs for this section has included a unique ID, allowing JavaScript to select and declare variables with each numeric value to their relative inputs. The aim for this section is to retrieve values entered by the user to display targets and performance statistics.
+After entering values into the first batch of entry fields, the user is to select the "Next" icon, to run a function. <br>
+This function retreives the mentioned values storing variables, then performes an if statement dependent on the users entry from the dropdown input.<br>
+Inner text is updated from the "next" button as this will be updating their selection from the original opted.<br>
+The table presented is inserted by the table selecting a division then writing .innerHTML.<br>
+Calculations are taken from the users input of Target calories per day then broken down to a specific % following the recommended guideline taken from website mentioned in the below acknowledgements.<br>
+Third section of calculator entry is after selecting display chart, the button is then updated to show "Update Chart", for improved user experience.<br>
+This then draws a pie chart below using guidance from W3 Schools and Google Graphs. The header shows a total count cumulation of carlories taken too.<br>
+<img src="assets/images/readme_files/calculator_fields.png" alt="first input fields and inserted table to add calories eaten">
+<img src="assets/images/readme_files/pie_chart_drawing.png" alt="Chart displayed after all fields entered and proceeded"><br>
+note - after updating the above and saving, the table was reset entering different details. Resulting in discrepancies from picture A to picture B.
+
 
 
 *********************
