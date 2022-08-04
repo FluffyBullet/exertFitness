@@ -1,6 +1,7 @@
 // Swapping of visible Tiles for Testimonies in mobile view
 let n = 0;
 var activeTestimony = document.getElementsByClassName('testimony-tile')[`${n}`];
+activeTestimony.style.display = "block";
 let testimonyParent = document.getElementById('testimony-display');
 function nextTile(){
     n = n + 1;
