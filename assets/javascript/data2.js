@@ -31,11 +31,6 @@ function prevTile(){
     console.log(activeTestimony);
 }
 
-
-google.charts.load(current, {packages:['corechart']});
-google.charts.setOnLoadCallback(drawChart);
-
-
 // Starting calculations from first entry fields 
 function stepOne(){
     //Declaring variables for calculations /

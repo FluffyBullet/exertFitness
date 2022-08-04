@@ -74,6 +74,10 @@ As a service tool, the website will include a feature to track and plan their ca
 
 ## <u>Expected Uses of Website</u>
 
+Expected users of the website are for seekers of gaining personal fitness and personal trainer. To Introduce the potential client to the peronal trainer the first page is an introduction to the advertiser of the website, followed by experiences of users of the service.<br>
+This page is intentionally kept as an easy flowing, simplistic layout for the consumer to navigate easily.<br>
+Second page is for further interest, showcasing the location, timetables and expected fee's. Also similar to the landing page with a simplistic view with levels of information presented in an ordered fashion to advise the client what what to expect and fee's of services.<br>
+Third page is the primary focus of the project and feature offered for re-occuring users of the website. This page is used for the entry and review / calculation of targets and tracking. With this page, data entry and manipulation will be the aim of the form entries. The buttons and labels (for input fields and the table header) will guide the user on what sections to complete and where.
 ### Features for User Experience   
 To support the user navigation and use of my website, I have opted to update specific area's the customer will be using for more information:
 
