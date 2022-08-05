@@ -223,48 +223,61 @@ addStore.addEventListener('click',storeResults());
 
 
     // Logging of data and values on the local storage facility
-    function storeResults(){
-        const breakfast = parseInt(document.getElementById('breakfast').value);
-        const lunch = parseInt(document.getElementById('lunch').value);
-        const dinner = parseInt(document.getElementById('dinner').value);
-        let date = document.getElementById('date');
-        let store = JSON.parse(
-            localStorage.getItem('dailys')
-        );
-        if (store === null) {
-            store = {};
-        }
-        store[date.value] = {
-            breakfast: breakfast,
-            lunch: lunch,
-            dinner: dinner,
-        };
-        localStorage.setItem('dailys',JSON.stringify(store));
-    } 
+function storeResults(){
+    const breakfast = parseInt(document.getElementById('breakfast').value);
+    const lunch = parseInt(document.getElementById('lunch').value);
+    const dinner = parseInt(document.getElementById('dinner').value);
+    let date = document.getElementById('date');
+    let store = JSON.parse(
+        localStorage.getItem('dailys')
+    );
+    if (store === null) {
+        store = {};
+    }
+    store[date.value] = {
+        breakfast: breakfast,
+        lunch: lunch,
+        dinner: dinner,
+    };
+    localStorage.setItem('dailys',JSON.stringify(store));
+} 
 
-    
-    google.charts.load('current', {'packages':['corechart']});
-    google.charts.setOnLoadCallback(drawChart);
-    
-    function drawChart1() {
-          //recalling of data stored in local storage
-          let results = localStorage.getItem('dailys');
-          console.log(JSON.parse(results));
-        var data = google.visualization.arrayToDataTable([
-          ['Director (Year)',  'Rotten Tomatoes', 'IMDB'],
-          ['Alfred Hitchcock (1935)', 8.4,         7.9],
-          ['Ralph Thomas (1959)',     6.9,         6.5],
-          ['Don Sharp (1978)',        6.5,         6.4],
-          ['James Hawes (2008)',      4.4,         6.2]
-        ]);
+    //attempt of stacked barchart from https://plotly.com/javascript/bar-charts/
+function drawChart1(){
+    //recalling of data stored in local storage
+    let results = JSON.parse(localStorage.getItem('dailys'));
+    let entries = Object.values(results);
+    let dateArray = Object.keys(results);
+    let breakfastArray = [];
+    let dinnerArray = [];
+    let lunchArray = []
+    for (let i = 0; i < entries.length; i++){
+        breakfastArray.push (entries[i].breakfast);
+        lunchArray.push(entries[i].lunch);
+        dinnerArray.push(entries[i].dinner);
+    }
+    var meal1 = {
+        x: dateArray,
+        y: breakfastArray,
+        type: 'bar',
+        name: 'Breakfast'
+    };
+    var meal2 = {
+        x: dateArray,
+        y: dinnerArray,
+        type: 'bar',
+        name: 'Dinner'
+    }
+    var meal3 = {
+        x: dateArray,
+        y: lunchArray,
+        type: 'bar',
+        name: 'Lunch'
+    }
 
-        var options = {
-          title: 'The decline of \'The 39 Steps\'',
-          vAxis: {title: 'Accumulated Rating'},
-          isStacked: true
-        };
+    var graphData = [meal1, meal2, meal3];
 
-        var chart = new google.visualization.SteppedAreaChart(document.getElementById('chart_div'));
+    var layout = {barmode: 'stack'};
 
-        chart.draw(data, options);
-      }
+    Plotly.newPlot('chart_div',graphData,layout);
+    }

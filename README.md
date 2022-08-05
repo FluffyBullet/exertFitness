@@ -200,5 +200,7 @@ In addition to W3 HTML Validator, I've also checked CSS Validator W3 Jigsaw, con
     * Egle Ratkeviviute, for use of her Personal training business and adapting expectations to meet website creation and project criteria. 
 - various undocumented websites
     * Used to view methodology and understanding of JavaScript and how they are used. 
+- ploty for graphical charts - https://plotly.com/javascript/bar-charts/
+    * Used on display of calorie entries over a period of days logged in local storage.
 ## <u>References</u>
 - Jason Reynolds (Brother) - for the support and guidance whilst asking questions on how to find the answer and being my rubber duck.
