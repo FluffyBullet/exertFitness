@@ -284,6 +284,7 @@ table input {
   width:50%;
   display:inline-block;
   clear:both;
+  text-align:left;
   }
   #greeting-right p {
   margin:0;
