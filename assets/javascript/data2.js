@@ -46,7 +46,6 @@ function prevTile(){
 function stepOne(){
     //Declaring variables for calculations /
 let stageTwo = document.getElementById('dataEntry');
-let name = document.getElementById('name').value;
 let tCal = parseInt(document.getElementById('target').value);
 let date = document.getElementById('date').value;
 let meals = parseInt(document.getElementById('meals').value);
@@ -277,7 +276,11 @@ function drawChart1(){
 
     var graphData = [meal1, meal2, meal3];
 
-    var layout = {barmode: 'stack'};
+    var layout = {
+        title: 'Historic Calorie Consumption',
+        barmode: 'stack'};
 
-    Plotly.newPlot('chart_div',graphData,layout);
+    var config = {responsive: true}
+
+    Plotly.newPlot('chart_div',graphData,layout, config);
     }

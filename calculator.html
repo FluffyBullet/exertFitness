@@ -38,16 +38,12 @@
             <!--Entry of name, date and target calories-->
                 <div id ="register" class="centered">
                     <div class="input-container">
-                    <input name="firstName" name="name" type="text" id="name" required>
-                    <label for="name">Name</label>
-                    </div>
-                    <div class="input-container">
                         <input type="date"name="date" id="date" required =""/>
                         <label for="date">Date</label>
                     </div>
                     <div>
                         <div class="input-container targetEntry">
-                            <input type="number" min="1" max="4000" id="target" required>
+                            <input type="number" min="1" max="4000" id="target" pattern="[0-9]{4}">
                             <label for="target">Target</label>
                             <p>calories</p>
                         </div>
@@ -62,7 +58,7 @@
                     </div>
                     <br>
                     <button id="stepOne" onclick="stepOne()">Next</button>
-                    
+                   
                 </div>
             <!--Providing information to documents on variable data/value's.-->
             <div id="dataEntry">
@@ -74,7 +70,9 @@
                 <button id="add-store" onclick="storeResults()">Log Data</button>
                 <button onclick="drawChart1()">Test</button>
             </div>
-            <div id="chart_div" style="width: 900px; height: 500px;"></div>
+            <div class="compare-container">
+            <div id="chart_div"></div>
+            </div>
         </section>
         <footer>
 

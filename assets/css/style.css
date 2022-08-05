@@ -227,6 +227,11 @@ table input {
   width:50%;
 }
 
+#chart_div {
+  margin:0 auto;
+  max-width:80%;
+}
+
 #greeting_right {
   margin: 0 10%;
 }

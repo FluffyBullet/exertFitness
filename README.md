@@ -162,6 +162,8 @@ In addition to W3 HTML Validator, I've also checked CSS Validator W3 Jigsaw, con
 #### Future developments
  1. Objective and target board to be included as part of an app/login feature. (research 1, Routine)
  2. Scheduled e-mails to owner of Exert Fitness to advise of users who have updated their calorie counts on the website.
+ 3. Limitation of dates displayed in comparison chart. At present the chart will display all data stored in local storage.
+    * This will be fixed in future updates by sorting all objects in date order, starting from the active date and working back either 7, 14 or 30 days.
 
 ## <u>Test & Bugs</u>
 ### Fixed
@@ -179,11 +181,14 @@ In addition to W3 HTML Validator, I've also checked CSS Validator W3 Jigsaw, con
  2. If table allowed 3 and 4 to be displayed with different answers, but 5 was not showing
  3. Imported tables not showing headers
  7. Google Graphs not displaying - advised variable of google.visualization not defined
+ 8. Wrapping input entries with form tag causes buttons and functions to clear all data and loop without progressing to the next stage.
+    * This results in input fields not requiring data to be entered before proceeding to the next stage.
+ 9. After entering calories per meal, updating the form resulted in a conflict of data for the Pie Chart display. When hovering over, the old data is displayed then reverted back on exit. 
 *********************
 
 ### Technologies used:
-    For this site, I am using the languages of HTML, CSS and JavaScript.
-    I've also selected to use google spreadsheets to store and fetch data (Via API) which will be presented in google graphs
+For this site, I am using the languages of HTML, CSS and JavaScript.<br>
+Also markdown language for the creation of this document :)
 
 ## <u>Acknowledgements</u>
 - Pexel Images
