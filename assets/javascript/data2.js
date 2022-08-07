@@ -224,8 +224,10 @@ addStore.addEventListener('click',storeResults());
     // Logging of data and values on the local storage facility
 function storeResults(){
     const breakfast = parseInt(document.getElementById('breakfast').value);
+    const morning_snack = parseInt(`${typeof(morningSnack) == 'undefined' ? '0' : parseInt(morningSnack.value)}`);
     const lunch = parseInt(document.getElementById('lunch').value);
-    const dinner = parseInt(document.getElementById('dinner').value);
+    const afternoon_snack = parseInt(`${typeof(afternoonSnack) == 'undefined' ? '0' : parseInt(afternoonSnack.value)}`)
+    const dinner = parseInt(document.getElementById('dinner').value);                
     let date = document.getElementById('date');
     let store = JSON.parse(
         localStorage.getItem('dailys')
@@ -235,7 +237,9 @@ function storeResults(){
     }
     store[date.value] = {
         breakfast: breakfast,
+        morning_snack: morning_snack,
         lunch: lunch,
+        afternoon_snack: afternoon_snack,
         dinner: dinner,
     };
     localStorage.setItem('dailys',JSON.stringify(store));
