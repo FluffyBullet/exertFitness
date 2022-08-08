@@ -214,6 +214,10 @@ button {
   
 }
 
+#meals_label {
+  position:relative;
+}
+
 #buttonTwo {
   width:fit-content;
 }

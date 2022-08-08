@@ -169,6 +169,29 @@ In addition to W3 HTML Validator, I've also checked CSS Validator W3 Jigsaw, con
 
 #### Final stage
 
+<strong>Minor tweaks</strong><br>
+On review of my page(s), smaller area's of the page required small amendments or removals.
+i.e "Meals per day" label when displayed in mobile view overlapped the dropdown box. This was resolved by adding position:relative with an ID tag of "meals_label".
+Pages included a duplcation of Author code in the head element - as this was copied and pasted from other pages.
+404 page "home" button does not include link to index.html.
+<br><br>
+<strong> Code Testing </strong>
+This is performed in two steps. 
+
+1. Written functions, testing expected and reality behaviours
+    * This is noted below within Test & Bugs category    
+2. Testings on Validator websites 
+    * The project has included four codes to instruct the computer/web on displaying my information.
+        1. HTML, Tested by W3 Validator <br>
+        Result: No errors found (8/8/22):<br>
+
+| Page | W3 Validator Results| Comments |
+|------|------|----|
+|index.html|<img src="assets/images/readme_files/w3_validator_index.png" alt="Index Page test results from w3 Validator" height="150px"> | N/A |
+|details.html|<img src="assets/images/readme_files/w3_validator_details.png" alt="Location and fee's page test results from w3 Validator" height="150px"> | N/A|
+|calculator.html|<img src="assets/images/readme_files/w3_validator_calculator.png" alt="Calculator page test results from w3 Validator" height="150px"> | This page shows a warning of Section without header elements. In reflection, this section is used to contain/hold a series of Div elements for the input entry and inserted HTML from JavaScript| 
+|404.html|<img src="assets/images/readme_files/w3_validator_404.png" alt="Error page test results from w3 Validator" height="150px"> | A warning of H1 found at a lower than expected section of the page. On review, this page is to display there has been an error with the directions, the page's main focus is for the middle of the page where the h1 tag is placed.|
+
 
 #### Future developments
  1. Objective and target board to be included as part of an app/login feature. (research 1, Routine)
