@@ -40,11 +40,15 @@ As a service tool, the website will include a feature to track and plan their ca
             note as I was previously researching this website was displayed as an information/blog post. since this has been created as a calculator too. My coding has not been influenced from this website.
     * Exercise
 2. Identification of uses
+    * Whilst comparing the information required for the website to be operational and expected features
+    * A share of personal trainers prefer to focus on the nutritional balance (Carbohydrates, Proteins, Fats, Vitamins, Minerals, Dietary Fibre and Water), but the logging of this would not be something (or least I can imagine/aware of). 
+    * Tracking of calories specified for a users target: The behaviour of logging calories consumed allowed JavaScript code to manipulate data, behave on actions/entries from the user and process efficiently. This resulted in the best method/focus of approach with endless oppertunity to improve/amend behaviours at a later date.
 3. Information/Methods required
+    * To ensure the information processed is correct, I used local gym, health wellbeing and nutrition websites to gather information on trends and targets. 
 
 ## <u>Approach</u>
 
-## <u>Designing of the Website</u>
+### Designing of the Website
    ### Structure of the site
    I've chosen the site to have a clear and easy to use navigation hosted over 3 separate pages.<br>
    <strong>Page 1</strong>
@@ -70,7 +74,10 @@ As a service tool, the website will include a feature to track and plan their ca
    ### Laptop Plus Design
    Laptops or desktop offer the clearest visual displays and accurate selection with mouse pointers. This factor has been counted in when drawing the wireframe for the final display stage, allowing images to be adjacent to the text but spread across the page, information boxes to be wider and displayed inline for easier comparison.<br>
    <img src = "assets/images/readme_files/laptop_plus_view.png" alt="Design for laptops and larger screens" height = "450px">
-   
+    
+    Note - during progression of the website, some layouts have varied from the expected with improved or re-purposed designs.
+    Mobile design was to display a list of testimonies from the clients, which displayed as a long list or only selection of examples - this was edited to present as a tile cycling through depending on the users selections.<br>
+    This amendment was then reflected to ther view modes.<br>
 
 ## <u>Expected Uses of Website</u>
 
@@ -173,6 +180,10 @@ In addition to W3 HTML Validator, I've also checked CSS Validator W3 Jigsaw, con
 ### Fixed
  1. Inner HTML removing instantly after applying function.
     * Within the function, an HTML script was drafted to input on the page. As this was not pushed or appended to a variable listed above the information was removed causing the display to temporarily showing the expected result then disapearing
+ 2. If table allowed 3 and 4 to be displayed with different answers, but 5 was not showing
+    * Amended as changing matching to equal to rather than strict equal to. 
+ 3. Imported tables not showing headers
+    * formatting error, as displayed with th in each row instead of th with splitting cells by td.
  4. Nav bar not extended to full width on calculator page.
     * Fix - this was caused by CSS Styling as the display was fit-content rather than fixing to screen width.
  5. Values showing as object then string, despite logging parseInt.
@@ -181,15 +192,17 @@ In addition to W3 HTML Validator, I've also checked CSS Validator W3 Jigsaw, con
  6. Input Labels are designed to move up on selection, when entered with a value the label will remain above the entry. But for "Target" entry, the label hides behind the input text causing an overlap.<br>
     <img src="assets/images/readme_files/input_label_error.png" alt="Target value entered at 5000 but clashing with label of 'Target'"><br>
     * Fix - this was found to be caused as the label was not associated with the input. Using the For tag with a matching ID links both fields together preventing the text to move back over/under the input value.
-### Current Bugs
- 2. If table allowed 3 and 4 to be displayed with different answers, but 5 was not showing
- 3. Imported tables not showing headers
  7. Google Graphs not displaying - advised variable of google.visualization not defined
+    * This was text provided by  websites on how to import the google chart onto the website. With this not working, I re-evaluated swapping to ploty graphs.
  8. Wrapping input entries with form tag causes buttons and functions to clear all data and loop without progressing to the next stage.
-    * This results in input fields not requiring data to be entered before proceeding to the next stage.
+    * This results in input fields not requiring data to be entered before proceeding to the next stage. Removed form tag from the website as not submitting or retrieving to databases/API's.
+### Current Bugs
  9. After entering calories per meal, updating the form resulted in a conflict of data for the Pie Chart display. When hovering over, the old data is displayed then reverted back on exit. 
  10. If entered target field with small or undivdeable values, the system calculates to decimal placements:<br>
     <img src="assets/images/readme_files/odd_values.png" alt = "target values displayed with decimal placements">
+    * This will be eliminated by rounding the value down to the nearest integer, to be updated at a later stage. 
+ 11. Final comparative graph showing duplicated values in nill entry. i.e if entering meals for a 3 meal day, but then using 4 days at a later stage, the additional meal copies the closest relevant value - Breakfast having value of 250, Morning Snack if value of 0 will also show 250. 
+    * As a working progress, the final chart only displays the three consistant meals, Breakfast, Dinner and Lunch. This is to be reviewed at a later date and updated.
 *********************
 
 ### Technologies used:

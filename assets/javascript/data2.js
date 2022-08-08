@@ -11,7 +11,7 @@ function myFunction() {
 
 // Swapping of visible Tiles for Testimonies in mobile view
 let n = 0;
-var activeTestimony = document.getElementsByClassName('testimony-tile')[`${n}`];
+var activeTestimony = document.getElementsByClassName('testimony-tile')[n];
 activeTestimony.style.display = "block";
 let testimonyParent = document.getElementById('testimony-display');
 function nextTile(){
@@ -23,7 +23,7 @@ function nextTile(){
     // n = n + 1;
     console.log(n);
    
-    activeTestimony = testimonyParent.children[`${n}`];
+    activeTestimony = testimonyParent.children[n];
     activeTestimony.style.display = "block";
     console.log(activeTestimony);
 }
@@ -252,16 +252,12 @@ function drawChart1(){
     let entries = Object.values(results);
     let dateArray = Object.keys(results);
     let breakfastArray = [];
-    let morningArray = [];
     let dinnerArray = [];
-    let afternoonArray = [];
     let lunchArray = [];
     for (let i = 0; i < entries.length; i++){
         breakfastArray.push (entries[i].breakfast);
         lunchArray.push(entries[i].lunch);
         dinnerArray.push(entries[i].dinner);
-        typeof(entries[i].morning_snack) == 'undefined' ? morningArray.push('0') : morningArray.push(entries[i].morning_snack);
-        typeof(entries[i].afternoon_snack) == 'undefined' ? afternoonArray.push('0') : afternoonArray.push(entries[i].afternoon_snack);
     }
     var meal1 = {
         x: dateArray,
@@ -271,30 +267,19 @@ function drawChart1(){
     };
     var meal2 = {
         x: dateArray,
-        y: breakfastArray,
-        type:'bar',
-        name: 'Morning Snack'
-    };
-    var meal3 = {
-        x: dateArray,
         y: dinnerArray,
         type: 'bar',
         name: 'Dinner'
     };
-    var meal4 = {
-        x: dateArray,
-        y: dinnerArray,
-        type: 'bar',
-        name: 'Afternoon Snack'
-    };
-    var meal5 = {
+    ;
+    var meal3 = {
         x: dateArray,
         y: lunchArray,
         type: 'bar',
         name: 'Lunch'
     };
 
-    var graphData = [meal1, meal3, meal5];
+    var graphData = [meal1, meal2, meal3];
 
     var layout = {
         title: 'Historic Calorie Consumption',
