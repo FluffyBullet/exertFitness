@@ -3,6 +3,10 @@ let n = 0;
 var activeTestimony = document.getElementsByClassName('testimony-tile')[n];
 activeTestimony.style.display = "block";
 let testimonyParent = document.getElementById('testimony-display');
+let previousTileButton = document.getElementsByTagName('button')[0];
+let nextTileButton = document.getElementsByTagName('button')[1];
+
+nextTileButton.addEventListener('click', nextTile);
 function nextTile(){
     n = n + 1;
     if (n === 5){
@@ -16,6 +20,8 @@ function nextTile(){
     activeTestimony.style.display = "block";
     console.log(activeTestimony);
 }
+
+previousTileButton.addEventListener('click', prevTile);
 function prevTile(){
     n = n - 1;
     if (n === 0-1){

@@ -18,6 +18,16 @@ let stageTwo = document.getElementById('dataEntry');
 let tCal = parseInt(document.getElementById('target').value);
 let meals = parseInt(document.getElementById('meals').value);
 let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent40;
+let entryDate = document.getElementById('date').value;
+
+if (entryDate == ""){
+    alert("No valid date selected, please select.")
+    return false;
+}
+if (isNaN(tCal)){
+    alert("Target calories not entered. Please enter a value to proceed.");
+    return false;
+}
 
 // Calculating values/
     percent5  = tCal*0.05;
