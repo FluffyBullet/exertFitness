@@ -119,6 +119,8 @@ This then draws a pie chart below using guidance from W3 Schools and Google Grap
 <img src="assets/images/readme_files/calculator_fields.png" alt="first input fields and inserted table to add calories eaten">
 <img src="assets/images/readme_files/pie_chart_drawing.png" alt="Chart displayed after all fields entered and proceeded"><br>
 note - after updating the above and saving, the table was reset entering different details. Resulting in discrepancies from picture A to picture B.
+<br>
+Above images also include Buttons which change context upon clicking. Mentioned above table under user experiences displays a use of function calling a inner Text replacement - operated by JavaScript's capabilities.
 
 
 
@@ -159,6 +161,8 @@ In addition to W3 HTML Validator, I've also checked CSS Validator W3 Jigsaw, con
 
 
 #### Final stage
+
+
 #### Future developments
  1. Objective and target board to be included as part of an app/login feature. (research 1, Routine)
  2. Scheduled e-mails to owner of Exert Fitness to advise of users who have updated their calorie counts on the website.
@@ -184,6 +188,8 @@ In addition to W3 HTML Validator, I've also checked CSS Validator W3 Jigsaw, con
  8. Wrapping input entries with form tag causes buttons and functions to clear all data and loop without progressing to the next stage.
     * This results in input fields not requiring data to be entered before proceeding to the next stage.
  9. After entering calories per meal, updating the form resulted in a conflict of data for the Pie Chart display. When hovering over, the old data is displayed then reverted back on exit. 
+ 10. If entered target field with small or undivdeable values, the system calculates to decimal placements:<br>
+    <img src="assets/images/readme_files/odd_values.png" alt = "target values displayed with decimal placements">
 *********************
 
 ### Technologies used:
@@ -209,3 +215,4 @@ Also markdown language for the creation of this document :)
     * Used on display of calorie entries over a period of days logged in local storage.
 ## <u>References</u>
 - Jason Reynolds (Brother) - for the support and guidance whilst asking questions on how to find the answer and being my rubber duck.
+- Marcel Mulders (Mentor) - supportive tips throughout the project with highlighting use of local storage.

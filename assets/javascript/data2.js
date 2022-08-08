@@ -224,9 +224,9 @@ addStore.addEventListener('click',storeResults());
     // Logging of data and values on the local storage facility
 function storeResults(){
     const breakfast = parseInt(document.getElementById('breakfast').value);
-    const morning_snack = parseInt(`${typeof(morningSnack) == 'undefined' ? '0' : parseInt(morningSnack.value)}`);
+    const morning_snack = parseInt(`${typeof(morningSnack) == 'undefined' ? 0 : parseInt(morningSnack.value)}`);
     const lunch = parseInt(document.getElementById('lunch').value);
-    const afternoon_snack = parseInt(`${typeof(afternoonSnack) == 'undefined' ? '0' : parseInt(afternoonSnack.value)}`)
+    const afternoon_snack = parseInt(`${typeof(afternoonSnack) == 'undefined' ? 0 : parseInt(afternoonSnack.value)}`);
     const dinner = parseInt(document.getElementById('dinner').value);                
     let date = document.getElementById('date');
     let store = JSON.parse(
@@ -252,12 +252,16 @@ function drawChart1(){
     let entries = Object.values(results);
     let dateArray = Object.keys(results);
     let breakfastArray = [];
+    let morningArray = []
     let dinnerArray = [];
-    let lunchArray = []
+    let afternoonArray = [];
+    let lunchArray = [];
     for (let i = 0; i < entries.length; i++){
         breakfastArray.push (entries[i].breakfast);
         lunchArray.push(entries[i].lunch);
         dinnerArray.push(entries[i].dinner);
+        typeof(entries[i].morning_snack) == 'undefined' ? morningArray.push(0) : morningArray.push(entries[i].morning_snack);
+        typeof(entries[i].afternoon_snack) == 'undefined' ? afternoonArray.push(0) : afternoonArray.push(entries[i].afternoon_snack);
     }
     var meal1 = {
         x: dateArray,
@@ -267,18 +271,30 @@ function drawChart1(){
     };
     var meal2 = {
         x: dateArray,
+        y: breakfastArray,
+        type:'bar',
+        name: 'Morning Snack'
+    }
+    var meal3 = {
+        x: dateArray,
         y: dinnerArray,
         type: 'bar',
         name: 'Dinner'
     }
-    var meal3 = {
+    var meal4 = {
+        x: dateArray,
+        y: dinnerArray,
+        type: 'bar',
+        name: 'Afternoon Snack'
+    }
+    var meal5 = {
         x: dateArray,
         y: lunchArray,
         type: 'bar',
         name: 'Lunch'
     }
 
-    var graphData = [meal1, meal2, meal3];
+    var graphData = [meal1, meal3, meal5];
 
     var layout = {
         title: 'Historic Calorie Consumption',
