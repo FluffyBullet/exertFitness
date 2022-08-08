@@ -252,7 +252,7 @@ function drawChart1(){
     let entries = Object.values(results);
     let dateArray = Object.keys(results);
     let breakfastArray = [];
-    let morningArray = []
+    let morningArray = [];
     let dinnerArray = [];
     let afternoonArray = [];
     let lunchArray = [];
@@ -260,8 +260,8 @@ function drawChart1(){
         breakfastArray.push (entries[i].breakfast);
         lunchArray.push(entries[i].lunch);
         dinnerArray.push(entries[i].dinner);
-        typeof(entries[i].morning_snack) == 'undefined' ? morningArray.push(0) : morningArray.push(entries[i].morning_snack);
-        typeof(entries[i].afternoon_snack) == 'undefined' ? afternoonArray.push(0) : afternoonArray.push(entries[i].afternoon_snack);
+        typeof(entries[i].morning_snack) == 'undefined' ? morningArray.push('0') : morningArray.push(entries[i].morning_snack);
+        typeof(entries[i].afternoon_snack) == 'undefined' ? afternoonArray.push('0') : afternoonArray.push(entries[i].afternoon_snack);
     }
     var meal1 = {
         x: dateArray,
@@ -274,25 +274,25 @@ function drawChart1(){
         y: breakfastArray,
         type:'bar',
         name: 'Morning Snack'
-    }
+    };
     var meal3 = {
         x: dateArray,
         y: dinnerArray,
         type: 'bar',
         name: 'Dinner'
-    }
+    };
     var meal4 = {
         x: dateArray,
         y: dinnerArray,
         type: 'bar',
         name: 'Afternoon Snack'
-    }
+    };
     var meal5 = {
         x: dateArray,
         y: lunchArray,
         type: 'bar',
         name: 'Lunch'
-    }
+    };
 
     var graphData = [meal1, meal3, meal5];
 
@@ -300,7 +300,7 @@ function drawChart1(){
         title: 'Historic Calorie Consumption',
         barmode: 'stack'};
 
-    var config = {responsive: true}
+    var config = {responsive: true};
 
     Plotly.newPlot('chart_div',graphData,layout, config);
     }
