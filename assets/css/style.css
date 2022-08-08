@@ -218,7 +218,7 @@ button {
   position:relative;
 }
 
-#buttonTwo {
+#buttonTwo, #history{
   width:fit-content;
 }
 

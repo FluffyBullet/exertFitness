@@ -21,7 +21,7 @@ let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent
 let entryDate = document.getElementById('date').value;
 
 if (entryDate == ""){
-    alert("No valid date selected, please select.")
+    alert("No valid date selected, please select.");
     return false;
 }
 if (isNaN(tCal)){
@@ -249,7 +249,6 @@ function drawChart1(){
         type: 'bar',
         name: 'Dinner'
     };
-    ;
     var meal3 = {
         x: dateArray,
         y: lunchArray,
