@@ -98,7 +98,7 @@ As the button will need to display a command which either progresses to the next
 <br>
 | Button     | Before       | After      |
 |-------|-------|-------|
-|Entry chart |<img src="assets/images/readme_files/stepone_button_before.png" alt="button one display before being pressed">| <img src="assets/images/readme_files/stepone_button_after.png" alt="button one display after being pressed" >|
+|Entry chart | <img src="assets\images\readme_files\stepone_button_before.png" alt="button one display before being pressed"> | <img src="assets\images\readme_files\stepone_button_after.png" alt="button one display after being pressed"> |
 |Display Chart | <img src="assets/images/readme_files/before_display_chart.png" alt="button two before being pressed"> | <img src="assets/images/readme_files/after_display_chart.png" alt="button two after being pressed">|
 
 ## <u>Focus of the Project</u>
