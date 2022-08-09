@@ -35,7 +35,7 @@ As a service tool, the website will include a feature to track and plan their ca
 ## <u>Research</u>
 1. characteristics of personal trainers
     * Routine
-        1. For personal trainers to optimize their clients muscle growth, a schedule is created with the client for type of exe rcises, daily routine and removal of bad-habits.
+        1. For personal trainers to optimize their clients muscle growth, a schedule is created with the client for type of exercises, daily routine and removal of bad-habits.
             1. This feature can be met with an "objectives" chart or progression feedback at a later stage of the website application. 
     * Consumption
         1. A huge impactor to personal training and gaining muscle is the balance of consumption. A Healthy maintenance of weight and muscles requires Women to consume approximately 2,000 calories per day and Men to consume 2,500 calories per day.<br>
@@ -67,7 +67,7 @@ As a service tool, the website will include a feature to track and plan their ca
    1. Exert Fitness had previously created a logo, presenting a color-scheme for the company and how it is displayed. This was originally Dark Blue and Red, but since changed with consultation with designing artist. This since changed to the current light blue for the male models and light pink on the female models, overall making more approachable for both/all genders.
     1. Testing the font of pink against the dark blue background of the logo (color #131f2f), color contrast and accessibility has provided a good level.
    ### Font Selection
-   Browsing wesbsite's available,  I found Googles examples of serif family - providing a clear and strong fonts with an elegant finish. 
+   Browsing website's available,  I found Googles examples of serif family - providing a clear and strong fonts with an elegant finish. 
    ### Mobile Design
    For mobile phones, the width of screens are limited with widths and selection area. To counter this, the wireframe created follows a simple flow with exception of two fields where the image is related to the information adjacent and less volume.<br>
    <img src = "assets/images/readme_files/mobile_view.png" alt = "Design for mobile screens" height="450px">
@@ -88,7 +88,7 @@ This amendment was then reflected to the view modes.<br>
 
 Expected users of the website are for seekers of gaining personal fitness and personal trainer. To Introduce the potential client to the personal trainer the first page is an introduction to the advertiser of the website, followed by experiences of users of the service.<br>
 This page is intentionally kept as an easy flowing, simplistic layout for the consumer to navigate easily.<br>
-Second page is for further interest, showcasing the location, timetables and expected fee's. Also similar to the landing page with a simplistic view with levels of information presented in an ordered fashion to advise the client what what to expect and fee's of services.<br>
+Second page is for further interest, showcasing the location, timetables and expected fee's. Also similar to the landing page with a simplistic view with levels of information presented in an ordered fashion to advise the client what to expect and fee's of services.<br>
 Third page is the primary focus of the project and feature offered for re-occurring users of the website. This page is used for the entry and review / calculation of targets and tracking. With this page, data entry and manipulation will be the aim of the form entries. The buttons and labels (for input fields and the table header) will guide the user on what sections to complete and where.
 ### Features for User Experience   
 To support the user navigation and use of my website, I have opted to update specific area's the customer will be using for more information:
@@ -220,6 +220,9 @@ This is performed in two steps.
  3. Limitation of dates displayed in comparison chart. At present the chart will display all data stored in local storage.
     * This will be fixed in future updates by sorting all objects in date order, starting from the active date and working back either 7, 14 or 30 days.
 
+#### Testing and Functions
+
+
 ## <u>Test & Bugs</u>
 ### Fixed
  1. Inner HTML removing instantly after applying function.
@@ -248,7 +251,16 @@ This is performed in two steps.
  11. Final comparative graph showing duplicated values in nill entry. i.e if entering meals for a 3 meal day, but then using 4 days at a later stage, the additional meal copies the closest relevant value - Breakfast having value of 250, Morning Snack if value of 0 will also show 250. 
     * As a working progress, the final chart only displays the three consistent meals, Breakfast, Dinner and Lunch. This is to be reviewed at a later date and updated.
 
-### Validation/Personal Test
+### Validation/Personal Testing
+
+<table>
+<th>
+<td>Location</td>
+<td>Testing of</td>
+<td>Method</td>
+<td>Expected behaviour</td>
+<td>Achieved/functional? </td>
+</table>
 
 *********************
 
