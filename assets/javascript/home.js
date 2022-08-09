@@ -13,12 +13,9 @@ function nextTile(){
         n = 5- n;
     }
     activeTestimony.style.display = "none";
-    // n = n + 1;
-    console.log(n);
-   
     activeTestimony = testimonyParent.children[n];
     activeTestimony.style.display = "block";
-    console.log(activeTestimony);
+
 }
 
 previousTileButton.addEventListener('click', prevTile);
@@ -28,11 +25,6 @@ function prevTile(){
         n = 4;
     }
     activeTestimony.style.display = "none";
-    console.log(n);
-    
-    
- 
     activeTestimony = testimonyParent.children[`${n}`];
     activeTestimony.style.display = "block";
-    console.log(activeTestimony);
 }
