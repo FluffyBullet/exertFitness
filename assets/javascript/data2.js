@@ -160,10 +160,18 @@ function drawChart(){
     if (meals == 4){ 
         morningSnack = document.getElementById('morningSnack');
         totalValue = parseInt(breakfast.value) + parseInt(morningSnack.value) + parseInt(lunch.value) + parseInt(dinner.value);
+        if (morningSnack.value == 0){
+            alert('Entry value(s) has not been entered, please add to proceed.');
+            return false;
+        }
         } else if (meals == 5){
             morningSnack = document.getElementById('morningSnack');
             afternoonSnack = document.getElementById('afternoonSnack');
             totalValue = parseInt(breakfast.value) + parseInt(morningSnack.value) + parseInt(lunch.value) + parseInt(afternoonSnack.value) + parseInt(dinner.value);
+            if( morningSnack.value == 0 || afternoonSnack.value == 0){
+                alert('Entry value(s) has not been entered, please add to proceed.');
+            return false;
+            }
         }
     const barColors = [
         "#FCF5F0",
