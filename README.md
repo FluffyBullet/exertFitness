@@ -269,14 +269,14 @@ This is performed in two steps.
 <td>Yes - Pass.</td>
 </tr>
 <tr>
-<td>index.html</td>
+<td rowspan = "2">index.html</td>
 <td>Next Testimony</td>
 <td>Clicking on the button under the testimony tile titled "Next"</td>
 <td>To cycle through the 5 entered testimonies then loop back to the start if exceeding 4.</td>
 <td>Yes - Pass.</td>
 </tr>
 <tr>
-<td>index.html</td>
+
 <td>Previous Testimony</td>
 <td>Clicking on the button under the testimony tile titled "Previous"</td>
 <td>To cycle through the 5 entered testimonies then loop back to the end if going past 0.</td>
@@ -287,27 +287,54 @@ This is performed in two steps.
 <td>External link to JD Gyms website</td>
 <td>Click</td>
 <td>On clicking of the hyper link, JD Gym's website to be displayed as a new tab</td>
-<td>Yes - Pass.</td>
+<td> <img src="assets/images/readme_files/new_tab_validation_test.png" alt="display of JDgyms being opened in a new tab"><br>
+Yes - Pass.</td>
 </tr>
 <tr>
-<td>calculator.html</td>
+<td rowspan = "5">calculator.html</td>
 <td>Data Entry all fields</td>
 <td>Changing the functions to console log it's entries when proceeding to the next stage.</td>
 <td>Console log in dev tools to log the value of values entered into the fields available.</td>
-<td>Achieved/functional? </td>
+<td>Yes - Pass.<br>
+<img src="assets/images/readme_files/form_entry_test.png" alt="console log showing values entered on website"/>
+</td>
 </tr>
-<td>Location</td>
-<td>Testing of</td>
-<td>Method</td>
-<td>Expected behaviour</td>
-<td>Achieved/functional? </td>
+
+<td>Data Validation</td>
+<td>Attempting to write test in numerical fields</td>
+<td>No characters to be displayed</td>
+<td>Only E Displays - on further searching e = exponent, mathamtical sign for abreviation of long numbers. - Pass.</td>
 </tr>
-</table>
-<td>Location</td>
-<td>Testing of</td>
-<td>Method</td>
-<td>Expected behaviour</td>
-<td>Achieved/functional? </td>
+
+<td>Proceeding to next stage without entering required details</td>
+<td>Pressing buttons to proceed whilst nothing has been entered into the input fields (one or all)<br>
+During this testing stage, entries were tested if 1 field was completed, if 4 was selected - filling the entry requirements for 3 (breakfast, lunch and dinner) or if 5 was selected entry requirements for 4 was entered (breakfast, morning snack, lunch and dinner) then requesting to proceed.</td>
+<td>When pressing the button, an alert is to be displayed explaining values have not been entered, please revise and resubmit.</td>
+<td><img src="assets/images/readme_files/date_validate_test.png" alt="alert to show date required to be entered"><br>
+<img src="assets/images/readme_files/target_validate_test.png" alt="alert to show target value is required to be entered"><br>
+<img src="assets/images/readme_files/meal_value_validation_test.png" alt="alert to show meal values are required"><br>
+Yes - Pass.
+</td>
+</tr>
+<tr>
+
+<td>Data validations when charts are displayed</td>
+<td>After charts have been displayed, removing the data then re-subbmiting with no values entered in the input fields.</td>
+<td>Alerts to be displayed similar to above condition.</td>
+<td>Yes - Pass.</td>
+</tr>
+<tr>
+
+<td>Values of meal calculation being added correctly and recalled throughout the analysis.</td>
+<td>Value of 2500 calories have been entered for 3, 4 and 5 meals, to be inspected on pie chart and comparison chart.<br>
+To compare details, I will select 4 dates side by side to show the total results and calculate results with the pie chart manually.</td>
+<td>All values expected to accumulate and display the total 2,500 value entered.</td>
+<td>
+<img src="assets/images/readme_files/3_meals_total_test.png" alt="display of pie chart matching sum of meals to expected value">
+<img src="assets/images/readme_files/4_meals_total_test.png" alt="display of pie chart matching sum of meals to expected value"><br>
+<img src="assets/images/readme_files/5_meals_total_test.png" alt="display of pie chart matching sum of meals to expected value">
+<img src="assets/images/readme_files/history_compare_total_test.png" alt="display of bar chart matching sum of meals to expected value"><br>
+Yes - Pass.</td>
 </tr>
 </table>
 
@@ -326,6 +353,9 @@ Also markdown language for the creation of this document :)
     * Pie Chart settings to display values entered by the user - https://www.w3schools.com/ai/ai_chartjs.asp
 - log rocket
     * website used for studying of local storage retreival. - https://blog.logrocket.com/storing-retrieving-javascript-objects-localstorage/
+- flaticon.com
+    * Download of icon used for Favicon created by Freepik- https://www.flaticon.com/free-icon/dumbbell_563777?term=gym&page=1&position=28&page=1&position=28&related_id=563777&origin=search<br>
+    <a href="https://www.flaticon.com/free-icons/gym" title="gym icons">Gym icons created by Freepik - Flaticon</a>
 - Scheme Color
     * Color scheme for pie charts on the calculator page - https://schemecolor.com
 - Project Idea
