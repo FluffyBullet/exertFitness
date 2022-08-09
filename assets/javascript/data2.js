@@ -20,6 +20,7 @@ let meals = parseInt(document.getElementById('meals').value);
 let percent5,percent10,percent15,percent20,percent25,percent30,percent35,percent40;
 let entryDate = document.getElementById('date').value;
 
+
 if (entryDate == ""){
     alert("No valid date selected, please select.");
        if (isNaN(tCal)){

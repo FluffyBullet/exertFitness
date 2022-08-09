@@ -251,15 +251,64 @@ This is performed in two steps.
  11. Final comparative graph showing duplicated values in nill entry. i.e if entering meals for a 3 meal day, but then using 4 days at a later stage, the additional meal copies the closest relevant value - Breakfast having value of 250, Morning Snack if value of 0 will also show 250. 
     * As a working progress, the final chart only displays the three consistent meals, Breakfast, Dinner and Lunch. This is to be reviewed at a later date and updated.
 
-### Validation/Personal Testing
+### <u>Validation/Personal Testing</u>
 
 <table>
-<th>
+<tr>
+<th>Location</th>
+<th>Testing of</th>
+<th>Method</th>
+<th>Expected behaviour</th>
+<th>Achieved/functional? </th>
+</tr>
+<tr>
+<td>index.html / details.html / calculator.html & 404.html</td>
+<td>Navigation Bar Function</td>
+<td>Reducing to hamburger menu when reducing screen size below 600px</td>
+<td>Using Dev tools, selecting responsive display. As I reduce or increase the screen width past or under the breakpoints for the navigation bar to change to hamburger menu</td>
+<td>Yes - Pass.</td>
+</tr>
+<tr>
+<td>index.html</td>
+<td>Next Testimony</td>
+<td>Clicking on the button under the testimony tile titled "Next"</td>
+<td>To cycle through the 5 entered testimonies then loop back to the start if exceeding 4.</td>
+<td>Yes - Pass.</td>
+</tr>
+<tr>
+<td>index.html</td>
+<td>Previous Testimony</td>
+<td>Clicking on the button under the testimony tile titled "Previous"</td>
+<td>To cycle through the 5 entered testimonies then loop back to the end if going past 0.</td>
+<td>Yes - Pass.</td>
+</tr>
+<tr>
+<td>details.html</td>
+<td>External link to JD Gyms website</td>
+<td>Click</td>
+<td>On clicking of the hyper link, JD Gym's website to be displayed as a new tab</td>
+<td>Yes - Pass.</td>
+</tr>
+<tr>
+<td>calculator.html</td>
+<td>Data Entry all fields</td>
+<td>Changing the functions to console log it's entries when proceeding to the next stage.</td>
+<td>Console log in dev tools to log the value of values entered into the fields available.</td>
+<td>Achieved/functional? </td>
+</tr>
 <td>Location</td>
 <td>Testing of</td>
 <td>Method</td>
 <td>Expected behaviour</td>
 <td>Achieved/functional? </td>
+</tr>
+</table>
+<td>Location</td>
+<td>Testing of</td>
+<td>Method</td>
+<td>Expected behaviour</td>
+<td>Achieved/functional? </td>
+</tr>
 </table>
 
 *********************
