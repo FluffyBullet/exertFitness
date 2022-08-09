@@ -22,12 +22,12 @@ let entryDate = document.getElementById('date').value;
 
 if (entryDate == ""){
     alert("No valid date selected, please select.");
+       if (isNaN(tCal)){
+        alert("Target calories not entered. Please enter a value to proceed.");
+        }
     return false;
 }
-if (isNaN(tCal)){
-    alert("Target calories not entered. Please enter a value to proceed.");
-    return false;
-}
+
 
 // Calculating values/
     percent5  = tCal*0.05;
