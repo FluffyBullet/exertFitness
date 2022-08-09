@@ -152,6 +152,11 @@ function drawChart(){
     let morningSnack;
     let afternoonSnack;
     let totalValue = parseInt(breakfast.value) + parseInt(lunch.value) + parseInt(dinner.value);
+
+    if (breakfast.value == 0 || lunch.value == 0|| dinner.value == 0 ) {
+        alert('Entry value(s) has not been entered, please add to proceed.');
+            return false;
+    }
     if (meals == 4){ 
         morningSnack = document.getElementById('morningSnack');
         totalValue = parseInt(breakfast.value) + parseInt(morningSnack.value) + parseInt(lunch.value) + parseInt(dinner.value);
