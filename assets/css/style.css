@@ -47,6 +47,10 @@ display:none;
     display: none;
   }
 
+  .enter_values, #contact_me {
+    display: inline-block;
+    width: 20%;
+  }
  
 /*end of navigation bar styling from w3 schools (continued in media queries)*/
 
@@ -145,7 +149,7 @@ width:100%;
 
 .input-container{
 	position:relative;
-  width:35%;
+  width:250px;
   margin:0 auto;
   margin-top:30px;
 }
@@ -273,6 +277,15 @@ table input {
   margin:25px auto;
 }
 
+#contact_me {
+  width:525px;
+  margin-left:0;
+}
+.enter_values{
+  width:525px;
+  display:inline-block;
+}
+
  /* Adjusting screen sizes */
 
  /* for Tablet design */
@@ -348,4 +361,19 @@ table input {
   #hours p {
     margin-top:5px;
   }
+ }
+
+ #contact_me input, #contact_me textarea {
+    width:250px;
+    margin-top: 15px;
+ }
+ #contact_me textarea{
+    height:150px;
+ }
+
+ #email_me {
+    width:125px;
+ }
+ #contact_me {
+  display:inline-block;
  }

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>
+            Exert Fitness - Service & Pricing Details
+        </title>
+        <meta name="author" content="David Reynolds">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Exert Fit is a Personal Training service based in Coventry and remotely to improve your fitness, up your game and change your approach
+        to modern day problems.">
+        <link type="image/png" rel="icon" href="assets/images/dumbbell.ico">
+        <link rel="stylesheet" href="assets/css/style.css" >
+        <meta charset="UTF-8">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
+            </style>
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        
+        <script type="text/javascript">
+            emailjs.init('Hw3dvWw1aXuf9SQQs')
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>Exert Fitness</h1>
+           
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <div class="nav_style" id="navHamburger" >
+                <a href="index.html">Home Page</a>
+                <a href="details.html">Location and Fees</a>
+                <a href="calculator.html">Calorie Counter</a>
+                <a href="log_cal.html" class="active">Contact Me</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                  </a>
+            </div>
+        </header>
+        <div>
+            <div id="contact_me">
+                <h2>Enquire/E-mail</h2>
+                <form id="email">
+                    <div>
+                        <input type="text" id ="contact_name" placeholder="Enter your name here"/>
+                    </div>
+                    <div>
+                        <input type="text" id="subject" placeholder="Enter subject title here"/>
+                    </div>    
+                    <div>
+                        <textarea type="textbox" id="information" placeholder="Your enquiry goes here"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" id="email_me">E-mail me!</button>
+                    </div>
+                </form>
+            </div>
+            <div class="enter_values">
+                <h2>For current members</h2>
+                <p>Enter your daily calories below:</p>
+                <form id="log_cal">
+                    <div class="input-container NameEntry">
+                        <input type="text" id="user" required =""/>
+                        <label for="user">Full Name</label>
+                    </div>
+                    <div class="input-container morning">
+                        <input type="number" id="morning_cal" required =""/>
+                        <label for="morning">Morning Calories</label>
+                    </div>
+                    <div class="input-container lunch">
+                        <input type="number" id="lunch_cal" required =""/>
+                        <label for="lunch">lunch Calories</label>
+                    </div>
+                    <div class="input-container evening">
+                        <input type="number" id="evening_cal" required =""/>
+                        <label for="evening">Evening Calories</label>
+                    </div>
+                    <div>
+                        <button type="submit" value="Send details">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+            <!-- <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+        <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script> -->
+        <script src="assets/javascript/contacts.js"></script>
+        <script src="assets/javascript/data2.js"></script>
+    </body>
+</html>
