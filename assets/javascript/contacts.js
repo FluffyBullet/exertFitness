@@ -71,25 +71,24 @@ const form = document.getElementById('log_cal');
 //   maybeEnableButtons();
 // }
 
+//    let templateParams = {
+//     name : document.getElementById('contact_name'),
+//     subject : document.getElementById('subject'),
+//     text : document.getElementById('information'),
+//    };
+
+
 const btn = document.getElementById('email_me');
 
-document.getElementById('contact_me').addEventListener('submit', function(event) {
+document.getElementById('email').addEventListener('submit', function(event) {
    event.preventDefault();
 
    btn.value = 'Sending...';
 
    const serviceID = 'default_service';
    const templateID = 'template_ke6n6an';
-   let eform = document.getElementById('email');
 
-   template = {
-    user : document.getElementById('user'),
-    morning : document.getElementById('morning_cal'),
-    lunch : document.getElementById('lunch_cal'),
-    evening : document.getElementById('evening_cal'),
-   }
-
-   emailjs.sendForm(serviceID, templateID, eform)
+   emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
       btn.value = 'Send Email';
       alert('Sent!');
@@ -98,5 +97,5 @@ document.getElementById('contact_me').addEventListener('submit', function(event)
       alert(JSON.stringify(err));
     });
 
-    eform.reset();
+    document.getElementById('email').reset();
 });

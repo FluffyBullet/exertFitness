@@ -39,15 +39,15 @@
         <div>
             <div id="contact_me">
                 <h2>Enquire/E-mail</h2>
-                <form id="email">
+                <form id="email" method="POST">
                     <div>
-                        <input type="text" id ="contact_name" placeholder="Enter your name here"/>
+                        <input type="text" id ="contact_name" name = "contact_name" placeholder="Enter your name here"/>
                     </div>
                     <div>
-                        <input type="text" id="subject" placeholder="Enter subject title here"/>
+                        <input type="text" id="subject" name = "subject" placeholder="Enter subject title here"/>
                     </div>    
                     <div>
-                        <textarea type="textbox" id="information" placeholder="Your enquiry goes here"></textarea>
+                        <textarea type="textbox" id="information" name = "information" placeholder="Your enquiry goes here"></textarea>
                     </div>
                     <div>
                         <button type="submit" id="email_me">E-mail me!</button>
