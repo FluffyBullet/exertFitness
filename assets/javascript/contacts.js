@@ -1,84 +1,12 @@
 
 //google sheets api key
-const API_KEY = "AIzaSyCCaNsTys5Wq0JSYa8UqJY7gZe1RxpMZYY";
+const API_KEY = "AIzaSyCA1e4Cu5TbGdYLbkAJOUCJBlCjjlFahes";
 const form = document.getElementById('log_cal');
-
-// form.addEventListener('submit', function handleSubmit(event){
-//     event.preventDefault();
-//     let user = document.getElementById('user');
-//     let morning = document.getElementById('morning_cal');
-//     let lunch = document.getElementById('lunch_cal');
-//     let evening = document.getElementById('evening_cal');
-
-//     console.log(user.value);
-//     console.log(morning.value);
-//     console.log(lunch.value);
-//     console.log(evening.value);
-
-    
-
-//     form.reset();
-// })
-
-// // TODO(developer): Set to client ID and API key from the Developer Console
-// const CLIENT_ID = '105536058403822864157';
-
-
-// // Discovery doc URL for APIs used by the quickstart
-// const DISCOVERY_DOC = 'https://sheets.googleapis.com/$discovery/rest?version=v4';
-
-// // Authorization scopes required by the API; multiple scopes can be
-// // included, separated by spaces.
-// const SCOPES = 'https://www.googleapis.com/auth/spreadsheets.readonly';
-
-// let tokenClient;
-// let gapiInited = false;
-// let gisInited = false;
-
-// document.getElementById('authorize_button').style.visibility = 'hidden';
-// document.getElementById('signout_button').style.visibility = 'hidden';
-
-// /**
-//  * Callback after api.js is loaded.
-//  */
-// function gapiLoaded() {
-//   gapi.load('client', intializeGapiClient);
-// }
-
-// /**
-//  * Callback after the API client is loaded. Loads the
-//  * discovery doc to initialize the API.
-//  */
-// async function intializeGapiClient() {
-//   await gapi.client.init({
-//     apiKey: API_KEY,
-//     discoveryDocs: [DISCOVERY_DOC],
-//   });
-//   gapiInited = true;
-//   maybeEnableButtons();
-// }
-
-// /**
-//  * Callback after Google Identity Services are loaded.
-//  */
-// function gisLoaded() {
-//   tokenClient = google.accounts.oauth2.initTokenClient({
-//     client_id: CLIENT_ID,
-//     scope: SCOPES,
-//     callback: '', // defined later
-//   });
-//   gisInited = true;
-//   maybeEnableButtons();
-// }
-
-//    let templateParams = {
-//     name : document.getElementById('contact_name'),
-//     subject : document.getElementById('subject'),
-//     text : document.getElementById('information'),
-//    };
-
-
 const btn = document.getElementById('email_me');
+const google = require('googleapis');
+const sheets = google.sheets('v4');
+
+//system-update@exertfitness.iam.gserviceaccount.com
 
 document.getElementById('email').addEventListener('submit', function(event) {
    event.preventDefault();
@@ -99,3 +27,65 @@ document.getElementById('email').addEventListener('submit', function(event) {
 
     document.getElementById('email').reset();
 });
+
+require('dotenv').config()
+
+
+const updateSpreadsheet = () => {
+  const oauth2Client = new google.auth.OAuth2(
+    process.env.GOOGLE_ID,
+    process.env.GOOGLE_SECRET
+  )
+
+  oauth2Client.setCredentials({
+    refresh_token: process.env.GOOGLE_REFRESH_TOKEN
+  })
+
+  oauth2Client
+  .refreshAccessToken((err, tokens) => {
+    if (err) return console.error(err)
+      
+    oauth2Client.setCredentials({
+      access_token: tokens.access_token
+    })
+
+    // The following call will create a spreadsheet and return an ID that can
+    // be used with the API. Note that oAuth API can only be used to access
+    // files it creates, not files already on a drive (unless you apply to
+    // Google for additional privilages.)
+    /*
+    sheets.spreadsheets.create({ auth: oauth2Client }, (err, response) => {
+     if (err) return console.error(err)
+     console.log(`New Spreadsheet ID: ${response.spreadsheetId}`)
+    })
+    */
+
+    let user = document.getElementById('user').value;
+    let morning = document.getElementById('morning_cal').value;
+    let lunch = document.getElementById('lunch_cal').value;
+    let evening = document.getElementById('evening_cal').value;
+     
+    sheets.spreadsheets.values.append({
+      spreadsheetId: process.env.GOOGLE_SPREADSHEET_ID,
+      range: 'Sheet1',
+      valueInputOption: 'RAW',
+      insertDataOption: 'INSERT_ROWS',
+      resource: {
+        values: [
+          [user, new Date().toISOString(), morning, lunch, evening]
+        ],
+      },
+      auth: oauth2Client
+    }, (err, response) => {
+      if (err) return console.error(err)
+    })
+
+  })
+}
+
+// Run at startup
+updateSpreadsheet()
+
+setInterval(() => {
+  updateSpreadsheet()
+}, 60000 * 60) // Run again every hour
